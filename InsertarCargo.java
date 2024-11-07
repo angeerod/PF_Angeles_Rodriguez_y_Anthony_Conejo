@@ -61,7 +61,7 @@ public class InsertarCargo extends JFrame {
 
         btnRegresar = new JButton("Regresar");
         btnRegresar.setBounds(50, 200, 100, 30);
-        btnRegresar.setToolTipText("Haz clic para regresar al menú.");
+        btnRegresar.setToolTipText("Haz clic para regresar al menú de inserción.");
         btnRegresar.addActionListener(e -> regresarAlMenu());
         add(btnRegresar);
     }

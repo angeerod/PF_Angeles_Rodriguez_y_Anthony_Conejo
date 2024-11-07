@@ -18,7 +18,7 @@ public class EliminarColaborador extends JFrame {
         setTitle("Eliminar Colaborador");
         setSize(370, 200);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        getContentPane().setBackground(new Color(151, 204, 233 ));
+        getContentPane().setBackground(new Color(151, 204, 233));
         setLocationRelativeTo(null);
         setLayout(null);
 
@@ -37,11 +37,13 @@ public class EliminarColaborador extends JFrame {
         txtIdColaborador = new JTextField();
         txtIdColaborador.setBounds(160, 50, 160, 30);
         txtIdColaborador.setBackground(new Color(199, 235, 255)); 
+        txtIdColaborador.setToolTipText("Ingrese el ID del colaborador que desea eliminar."); // Tooltip
         add(txtIdColaborador);
 
         // Botón para eliminar el colaborador
         JButton btnEliminar = new JButton("Eliminar Colaborador");
         btnEliminar.setBounds(160, 100, 160, 30);
+        btnEliminar.setToolTipText("Haz clic para eliminar el colaborador con el ID ingresado."); // Tooltip
         btnEliminar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -53,6 +55,7 @@ public class EliminarColaborador extends JFrame {
         // Botón para regresar al menú eliminar
         JButton btnRegresar = new JButton("Regresar");
         btnRegresar.setBounds(30, 100, 100, 30);
+        btnRegresar.setToolTipText("Haz clic para regresar al menú de eliminación."); // Tooltip
         btnRegresar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

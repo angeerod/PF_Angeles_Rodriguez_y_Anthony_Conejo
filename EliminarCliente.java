@@ -1,5 +1,4 @@
 import javax.swing.*;
-
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -17,7 +16,7 @@ public class EliminarCliente extends JFrame {
         setTitle("Eliminar Cliente");
         setSize(350, 200);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        getContentPane().setBackground(new Color(151, 204, 233 ));
+        getContentPane().setBackground(new Color(151, 204, 233));
         setLocationRelativeTo(null);
         setLayout(null);
 
@@ -27,7 +26,6 @@ public class EliminarCliente extends JFrame {
         lblTitulo.setBounds(20, 5, 300, 40); // Establecer las coordenadas y tamaño del título
         add(lblTitulo); // Añadir el JLabel al JFrame
 
-
         // Etiqueta y campo de texto para ingresar la cédula del cliente
         JLabel lblCedula = new JLabel("Cédula:");
         lblCedula.setBounds(60, 50, 100, 30);
@@ -36,11 +34,13 @@ public class EliminarCliente extends JFrame {
         txtCedula = new JTextField();
         txtCedula.setBounds(160, 50, 150, 30);
         txtCedula.setBackground(new Color(199, 235, 255)); 
+        txtCedula.setToolTipText("Ingrese la cédula del cliente que desea eliminar."); // Tooltip
         add(txtCedula);
 
         // Botón para eliminar el cliente
         JButton btnEliminar = new JButton("Eliminar Cliente");
         btnEliminar.setBounds(160, 100, 150, 30);
+        btnEliminar.setToolTipText("Haz clic para eliminar al cliente con la cédula ingresada."); // Tooltip
         btnEliminar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -52,13 +52,13 @@ public class EliminarCliente extends JFrame {
         // Botón para regresar al menú eliminar
         JButton btnRegresar = new JButton("Regresar");
         btnRegresar.setBounds(30, 100, 100, 30);
+        btnRegresar.setToolTipText("Haz clic para regresar al menú de eliminación."); // Tooltip
         btnRegresar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 regresarAlMenuEliminar(); // Llamar al método para regresar
             }
         });
-        
         add(btnRegresar);
     }
 
@@ -76,7 +76,7 @@ public class EliminarCliente extends JFrame {
 
         try {
             // Conectar a la base de datos
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/basetienda?verifyServerCertificate=false&useSSL=true", "root", "angee2701");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/basetienda?verifyServerCertificate=false&useSSL=true", "root", "tu_contraseña");
 
             // Llamar al procedimiento almacenado
             String query = "{CALL EliminarCliente(?)}";
@@ -108,7 +108,7 @@ public class EliminarCliente extends JFrame {
     private void regresarAlMenuEliminar() {
         MenuEliminar menuEliminar = new MenuEliminar(); // Crear la instancia del menú Eliminar
         menuEliminar.setVisible(true); // Hacer visible el menú Eliminar
-        this.dispose(); // Cerrar la ventana de cargos
+        this.dispose(); // Cerrar la ventana de eliminación
     }
 
     public static void main(String[] args) {

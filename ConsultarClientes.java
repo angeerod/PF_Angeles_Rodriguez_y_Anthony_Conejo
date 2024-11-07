@@ -22,8 +22,10 @@ public class ConsultarClientes extends JFrame {
         JScrollPane scrollPane = new JScrollPane(table);
         add(scrollPane, BorderLayout.CENTER);
 
+        // Crear el panel para el botón "Regresar"
         JPanel panelBoton = new JPanel();
         JButton btnRegresar = new JButton("Regresar");
+        btnRegresar.setToolTipText("Haz clic para regresar al menú de consultas.");
         panelBoton.add(btnRegresar);
         add(panelBoton, BorderLayout.SOUTH);
 
@@ -57,10 +59,18 @@ public class ConsultarClientes extends JFrame {
             JOptionPane.showMessageDialog(this, "Error en la base de datos: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
-     // Método para regresar al MenuVisualizar
-     private void regresarAlMenuVisualizar() {
+
+    // Método para regresar al MenuVisualizar
+    private void regresarAlMenuVisualizar() {
         MenuConsultar menuConsultar = new MenuConsultar();
         menuConsultar.setVisible(true); // Mostrar MenuVisualizar
         this.dispose(); // Cerrar la ventana actual (VentanaClientes)
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            ConsultarClientes ventana = new ConsultarClientes();
+            ventana.setVisible(true);
+        });
     }
 }

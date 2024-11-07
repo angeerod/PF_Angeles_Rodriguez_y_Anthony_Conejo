@@ -16,7 +16,7 @@ public class EliminarCargo extends JFrame {
         setTitle("Eliminar Cargo");
         setSize(350, 200);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        getContentPane().setBackground(new Color(151, 204, 233 ));
+        getContentPane().setBackground(new Color(151, 204, 233));
         setLocationRelativeTo(null);
         setLayout(null);
 
@@ -35,11 +35,13 @@ public class EliminarCargo extends JFrame {
         txtIdCargo = new JTextField();
         txtIdCargo.setBounds(160, 50, 150, 30);
         txtIdCargo.setBackground(new Color(199, 235, 255)); 
+        txtIdCargo.setToolTipText("Ingrese el ID del cargo que desea eliminar."); // Tooltip
         add(txtIdCargo);
 
         // Botón para eliminar el cargo
         JButton btnEliminar = new JButton("Eliminar Cargo");
         btnEliminar.setBounds(160, 100, 150, 30);
+        btnEliminar.setToolTipText("Haz clic para eliminar el cargo con el ID ingresado."); // Tooltip
         btnEliminar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -51,6 +53,7 @@ public class EliminarCargo extends JFrame {
         // Botón para regresar al menú eliminar
         JButton btnRegresar = new JButton("Regresar");
         btnRegresar.setBounds(30, 100, 100, 30);
+        btnRegresar.setToolTipText("Haz clic para regresar al menú de eliminación."); // Tooltip
         btnRegresar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -107,7 +110,7 @@ public class EliminarCargo extends JFrame {
     private void regresarAlMenuEliminar() {
         MenuEliminar menuEliminar = new MenuEliminar(); // Crear la instancia del menú Eliminar
         menuEliminar.setVisible(true); // Hacer visible el menú Eliminar
-        this.dispose(); // Cerrar la ventana de cargos
+        this.dispose(); // Cerrar la ventana de eliminación
     }
 
     public static void main(String[] args) {
@@ -117,5 +120,3 @@ public class EliminarCargo extends JFrame {
         });
     }
 }
-
- 

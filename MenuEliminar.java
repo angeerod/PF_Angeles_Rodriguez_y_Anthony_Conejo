@@ -10,7 +10,7 @@ public class MenuEliminar extends JFrame {
         setTitle("Menú Eliminar");
         setSize(500, 350);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        getContentPane().setBackground(new Color(151, 204, 233 ));
+        getContentPane().setBackground(new Color(151, 204, 233));
         setLocationRelativeTo(null);
         setLayout(null); // Usamos setLayout(null) para usar coordenadas absolutas
 
@@ -29,6 +29,7 @@ public class MenuEliminar extends JFrame {
         // Crear los botones y establecer sus coordenadas para eliminar
         JButton btnEliminarCliente = new JButton("Eliminar Cliente");
         btnEliminarCliente.setBounds(150, 80, 200, 40); // Coordenadas para el botón de eliminar cliente
+        btnEliminarCliente.setToolTipText("Haz clic para eliminar un cliente"); // Tooltip
         btnEliminarCliente.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -40,6 +41,7 @@ public class MenuEliminar extends JFrame {
 
         JButton btnEliminarColaborador = new JButton("Eliminar Colaborador");
         btnEliminarColaborador.setBounds(150, 130, 200, 40); // Coordenadas para el botón de eliminar colaborador
+        btnEliminarColaborador.setToolTipText("Haz clic para eliminar un colaborador"); // Tooltip
         btnEliminarColaborador.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -51,6 +53,7 @@ public class MenuEliminar extends JFrame {
 
         JButton btnEliminarCargo = new JButton("Eliminar Cargo");
         btnEliminarCargo.setBounds(150, 180, 200, 40); // Coordenadas para el botón de eliminar cargo
+        btnEliminarCargo.setToolTipText("Haz clic para eliminar un cargo"); // Tooltip
         btnEliminarCargo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -60,10 +63,10 @@ public class MenuEliminar extends JFrame {
         });
         add(btnEliminarCargo);
 
-
         // Crear el botón "Regresar"
         JButton btnRegresar = new JButton("Regresar");
         btnRegresar.setBounds(30, 250, 100, 30); // Establecer las coordenadas para el botón "Regresar"
+        btnRegresar.setToolTipText("Haz clic para regresar al menú principal"); // Tooltip
         btnRegresar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -97,7 +100,6 @@ public class MenuEliminar extends JFrame {
         EliminarCargo eliminarCargo = new EliminarCargo();
         eliminarCargo.setVisible(true);
     }
-
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {

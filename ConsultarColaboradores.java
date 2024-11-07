@@ -12,7 +12,7 @@ public class ConsultarColaboradores extends JFrame {
         setTitle("Lista de Colaboradores");
         setSize(700, 400);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        getContentPane().setBackground(new Color(151, 204, 233 ));
+        getContentPane().setBackground(new Color(151, 204, 233));
         setLocationRelativeTo(null);
         setLayout(new BorderLayout()); // Usamos BorderLayout para organizar los componentes
 
@@ -26,6 +26,7 @@ public class ConsultarColaboradores extends JFrame {
         // Crear el botón "Regresar"
         JPanel panelBoton = new JPanel();
         JButton btnRegresar = new JButton("Regresar");
+        btnRegresar.setToolTipText("Haz clic para regresar al menú de consultas.");
         panelBoton.add(btnRegresar);
         add(panelBoton, BorderLayout.SOUTH);
 
@@ -36,7 +37,7 @@ public class ConsultarColaboradores extends JFrame {
                 regresarAlMenuVisualizar(); // Llamar al método que abrirá el MenuVisualizar
             }
         });
-        
+
         // Cargar los colaboradores en la tabla
         cargarColaboradores(tableModel);
     }
@@ -97,4 +98,3 @@ public class ConsultarColaboradores extends JFrame {
         });
     }
 }
-

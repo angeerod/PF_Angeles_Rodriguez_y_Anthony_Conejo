@@ -100,7 +100,7 @@ public class InsertarCliente extends JFrame {
         // Botón de regresar al menú principal
         btnRegresar = new JButton("Regresar");
         btnRegresar.setBounds(50, 290, 100, 30);
-        btnRegresar.setToolTipText("Haz clic para regresar al menú.");
+        btnRegresar.setToolTipText("Haz clic para regresar al menú de inserción.");
         btnRegresar.addActionListener(e -> regresarAlMenu());
         add(btnRegresar);
     }
