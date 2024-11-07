@@ -1,4 +1,7 @@
 import javax.swing.*;
+
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.CallableStatement;
@@ -12,23 +15,30 @@ public class EliminarCliente extends JFrame {
     public EliminarCliente() {
         // Configuración de la ventana
         setTitle("Eliminar Cliente");
-        setSize(400, 200);
+        setSize(350, 200);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(null);
 
+        JLabel lblTitulo = new JLabel("Ingrese la cédula del cliente a eliminar:", SwingConstants.CENTER);
+        lblTitulo.setFont(new Font("Georgia", Font.BOLD, 14));
+        lblTitulo.setForeground(Color.BLACK); // Color del texto
+        lblTitulo.setBounds(20, 5, 300, 40); // Establecer las coordenadas y tamaño del título
+        add(lblTitulo); // Añadir el JLabel al JFrame
+
+
         // Etiqueta y campo de texto para ingresar la cédula del cliente
         JLabel lblCedula = new JLabel("Cédula:");
-        lblCedula.setBounds(50, 40, 100, 30);
+        lblCedula.setBounds(60, 50, 100, 30);
         add(lblCedula);
 
         txtCedula = new JTextField();
-        txtCedula.setBounds(150, 40, 200, 30);
+        txtCedula.setBounds(160, 50, 150, 30);
         add(txtCedula);
 
         // Botón para eliminar el cliente
         JButton btnEliminar = new JButton("Eliminar Cliente");
-        btnEliminar.setBounds(125, 90, 150, 30);
+        btnEliminar.setBounds(160, 100, 150, 30);
         btnEliminar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -39,13 +49,14 @@ public class EliminarCliente extends JFrame {
 
         // Botón para regresar al menú eliminar
         JButton btnRegresar = new JButton("Regresar");
-        btnRegresar.setBounds(125, 130, 150, 30);
+        btnRegresar.setBounds(30, 100, 100, 30);
         btnRegresar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dispose(); // Cierra esta ventana y vuelve al menú anterior
+                regresarAlMenuEliminar(); // Llamar al método para regresar
             }
         });
+        
         add(btnRegresar);
     }
 
@@ -90,6 +101,12 @@ public class EliminarCliente extends JFrame {
                 JOptionPane.showMessageDialog(this, "Error al cerrar la conexión: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
+    }
+
+    private void regresarAlMenuEliminar() {
+        MenuEliminar menuEliminar = new MenuEliminar(); // Crear la instancia del menú Eliminar
+        menuEliminar.setVisible(true); // Hacer visible el menú Eliminar
+        this.dispose(); // Cerrar la ventana de cargos
     }
 
     public static void main(String[] args) {

@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.CallableStatement;
@@ -12,23 +14,30 @@ public class EliminarCargo extends JFrame {
     public EliminarCargo() {
         // Configuración de la ventana
         setTitle("Eliminar Cargo");
-        setSize(400, 200);
+        setSize(350, 200);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(null);
 
+        // Título
+        JLabel lblTitulo = new JLabel("Ingrese el ID del cargo a eliminar:", SwingConstants.CENTER);
+        lblTitulo.setFont(new Font("Georgia", Font.BOLD, 14));
+        lblTitulo.setForeground(Color.BLACK); // Color del texto
+        lblTitulo.setBounds(20, 5, 300, 40); // Establecer las coordenadas y tamaño del título
+        add(lblTitulo); // Añadir el JLabel al JFrame
+
         // Etiqueta y campo de texto para ingresar el ID del cargo
         JLabel lblIdCargo = new JLabel("ID del Cargo:");
-        lblIdCargo.setBounds(50, 40, 100, 30);
+        lblIdCargo.setBounds(50, 50, 100, 30);
         add(lblIdCargo);
 
         txtIdCargo = new JTextField();
-        txtIdCargo.setBounds(150, 40, 200, 30);
+        txtIdCargo.setBounds(160, 50, 150, 30);
         add(txtIdCargo);
 
         // Botón para eliminar el cargo
         JButton btnEliminar = new JButton("Eliminar Cargo");
-        btnEliminar.setBounds(125, 90, 150, 30);
+        btnEliminar.setBounds(160, 100, 150, 30);
         btnEliminar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -39,11 +48,11 @@ public class EliminarCargo extends JFrame {
 
         // Botón para regresar al menú eliminar
         JButton btnRegresar = new JButton("Regresar");
-        btnRegresar.setBounds(125, 130, 150, 30);
+        btnRegresar.setBounds(30, 100, 100, 30);
         btnRegresar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dispose(); // Cierra esta ventana y vuelve al menú anterior
+                regresarAlMenuEliminar(); // Regresar al menú eliminar
             }
         });
         add(btnRegresar);
@@ -92,6 +101,13 @@ public class EliminarCargo extends JFrame {
         }
     }
 
+    // Método para regresar al menú eliminar
+    private void regresarAlMenuEliminar() {
+        MenuEliminar menuEliminar = new MenuEliminar(); // Crear la instancia del menú Eliminar
+        menuEliminar.setVisible(true); // Hacer visible el menú Eliminar
+        this.dispose(); // Cerrar la ventana de cargos
+    }
+
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             EliminarCargo eliminarCargo = new EliminarCargo();
@@ -99,4 +115,5 @@ public class EliminarCargo extends JFrame {
         });
     }
 }
+
  

@@ -1,7 +1,12 @@
 import javax.swing.*;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.*;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class EliminarColaborador extends JFrame {
 
@@ -11,23 +16,30 @@ public class EliminarColaborador extends JFrame {
     public EliminarColaborador() {
         // Configuración de la ventana
         setTitle("Eliminar Colaborador");
-        setSize(400, 250);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(370, 200);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(null);
 
+        // Título
+        JLabel lblTitulo = new JLabel("Ingrese el ID del colaborador a eliminar:", SwingConstants.CENTER);
+        lblTitulo.setFont(new Font("Georgia", Font.BOLD, 14));
+        lblTitulo.setForeground(Color.BLACK); // Color del texto
+        lblTitulo.setBounds(30, 5, 300, 40); // Establecer las coordenadas y tamaño del título
+        add(lblTitulo); // Añadir el JLabel al JFrame
+
         // Etiqueta y campo de texto para el ID del colaborador
         JLabel lblIdColaborador = new JLabel("ID Colaborador:");
-        lblIdColaborador.setBounds(50, 50, 120, 30);
+        lblIdColaborador.setBounds(40, 50, 100, 30);
         add(lblIdColaborador);
 
         txtIdColaborador = new JTextField();
-        txtIdColaborador.setBounds(180, 50, 150, 30);
+        txtIdColaborador.setBounds(160, 50, 160, 30);
         add(txtIdColaborador);
 
         // Botón para eliminar el colaborador
         JButton btnEliminar = new JButton("Eliminar Colaborador");
-        btnEliminar.setBounds(100, 120, 200, 30);
+        btnEliminar.setBounds(160, 100, 160, 30);
         btnEliminar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -36,13 +48,13 @@ public class EliminarColaborador extends JFrame {
         });
         add(btnEliminar);
 
-        // Botón para regresar al menú de eliminar
+        // Botón para regresar al menú eliminar
         JButton btnRegresar = new JButton("Regresar");
-        btnRegresar.setBounds(150, 170, 100, 30);
+        btnRegresar.setBounds(30, 100, 100, 30);
         btnRegresar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                regresarAlMenuEliminar();
+                regresarAlMenuEliminar(); // Regresar al menú eliminar
             }
         });
         add(btnRegresar);
@@ -53,7 +65,7 @@ public class EliminarColaborador extends JFrame {
         String idColaborador = txtIdColaborador.getText();
 
         if (idColaborador.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Por favor ingrese el ID del colaborador.", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Por favor ingrese el ID del colaborador.", "Error", JOptionPane.WARNING_MESSAGE);
             return;
         }
 
@@ -96,7 +108,7 @@ public class EliminarColaborador extends JFrame {
         }
     }
 
-    // Método para regresar al menú de eliminar
+    // Método para regresar al menú eliminar
     private void regresarAlMenuEliminar() {
         MenuEliminar menuEliminar = new MenuEliminar();
         menuEliminar.setVisible(true);
