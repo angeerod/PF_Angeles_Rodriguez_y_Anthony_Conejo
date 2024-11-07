@@ -24,7 +24,7 @@ public class MenuConsultar extends JFrame {
         btnVisualizarCliente.setBounds(150, 80, 200, 40);
         add(btnVisualizarCliente);
 
-        JButton btnVisualizarColaborador = new JButton("Visualizar Colaboradores");
+        JButton btnVisualizarColaborador = new JButton("Colaboradores");
         btnVisualizarColaborador.setBounds(150, 130, 200, 40);
         btnVisualizarColaborador.addActionListener(new ActionListener() {
             @Override
