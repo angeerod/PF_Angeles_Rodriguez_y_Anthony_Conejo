@@ -8,7 +8,7 @@ public class MenuIngresar extends JFrame {
     public MenuIngresar() {
         // Configuración de la ventana
         setTitle("Menú Agregar");
-        setSize(600, 430);
+        setSize(500, 350);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(null); // Usamos setLayout(null) para usar coordenadas absolutas
@@ -23,12 +23,12 @@ public class MenuIngresar extends JFrame {
         JLabel lblTitulo = new JLabel("¿Qué desea agregar?", SwingConstants.CENTER);
         lblTitulo.setFont(new Font("Georgia", Font.BOLD, 24));
         lblTitulo.setForeground(Color.BLACK); // Color del texto
-        lblTitulo.setBounds(150, 20, 300, 40); // Establecer las coordenadas y tamaño del título
+        lblTitulo.setBounds(100, 20, 300, 40); // Establecer las coordenadas y tamaño del título
         add(lblTitulo); // Añadir el JLabel al JFrame
 
         // Crear los botones y establecer sus coordenadas
         JButton btnInsertarCliente = new JButton("Agregar Cliente");
-        btnInsertarCliente.setBounds(200, 80, 200, 40); // Coordenadas para el botón de insertar cliente
+        btnInsertarCliente.setBounds(150, 80, 200, 40); // Coordenadas para el botón de insertar cliente
         btnInsertarCliente.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -38,7 +38,7 @@ public class MenuIngresar extends JFrame {
         add(btnInsertarCliente); // Añadir el botón al JFrame
 
         JButton btnAgregarColaborador = new JButton("Agregar Colaborador");
-        btnAgregarColaborador.setBounds(200, 130, 200, 40); // Coordenadas para el botón de agregar colaborador
+        btnAgregarColaborador.setBounds(150, 130, 200, 40); // Coordenadas para el botón de agregar colaborador
         btnAgregarColaborador.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -48,7 +48,7 @@ public class MenuIngresar extends JFrame {
         add(btnAgregarColaborador); // Añadir el botón al JFrame
 
         JButton btnAgregarCargo = new JButton("Agregar Cargo");
-        btnAgregarCargo.setBounds(200, 180, 200, 40); // Coordenadas para el botón de agregar cargo
+        btnAgregarCargo.setBounds(150, 180, 200, 40); // Coordenadas para el botón de agregar cargo
         btnAgregarCargo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -59,7 +59,7 @@ public class MenuIngresar extends JFrame {
 
             // Crear el botón "Regresar"
     JButton btnRegresar = new JButton("Regresar");
-    btnRegresar.setBounds(30, 340, 100, 30); // Establecer las coordenadas para el botón "Regresar"
+    btnRegresar.setBounds(30, 250, 100, 30); // Establecer las coordenadas para el botón "Regresar"
     btnRegresar.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {

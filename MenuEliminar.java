@@ -8,7 +8,7 @@ public class MenuEliminar extends JFrame {
     public MenuEliminar() {
         // Configuración de la ventana
         setTitle("Menú Eliminar");
-        setSize(600, 430);
+        setSize(500, 350);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(null); // Usamos setLayout(null) para usar coordenadas absolutas
@@ -22,12 +22,12 @@ public class MenuEliminar extends JFrame {
         JLabel lblTitulo = new JLabel("¿Qué desea eliminar?", SwingConstants.CENTER);
         lblTitulo.setFont(new Font("Georgia", Font.BOLD, 24));
         lblTitulo.setForeground(Color.BLACK); // Color del texto
-        lblTitulo.setBounds(150, 20, 300, 40); // Establecer las coordenadas y tamaño del título
+        lblTitulo.setBounds(100, 20, 300, 40); // Establecer las coordenadas y tamaño del título
         add(lblTitulo); // Añadir el JLabel al JFrame
 
         // Crear los botones y establecer sus coordenadas para eliminar
         JButton btnEliminarCliente = new JButton("Eliminar Cliente");
-        btnEliminarCliente.setBounds(200, 80, 200, 40); // Coordenadas para el botón de eliminar cliente
+        btnEliminarCliente.setBounds(150, 80, 200, 40); // Coordenadas para el botón de eliminar cliente
         btnEliminarCliente.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -38,7 +38,7 @@ public class MenuEliminar extends JFrame {
         add(btnEliminarCliente);
 
         JButton btnEliminarColaborador = new JButton("Eliminar Colaborador");
-        btnEliminarColaborador.setBounds(200, 130, 200, 40); // Coordenadas para el botón de eliminar colaborador
+        btnEliminarColaborador.setBounds(150, 130, 200, 40); // Coordenadas para el botón de eliminar colaborador
         btnEliminarColaborador.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -49,7 +49,7 @@ public class MenuEliminar extends JFrame {
         add(btnEliminarColaborador);
 
         JButton btnEliminarCargo = new JButton("Eliminar Cargo");
-        btnEliminarCargo.setBounds(200, 180, 200, 40); // Coordenadas para el botón de eliminar cargo
+        btnEliminarCargo.setBounds(150, 180, 200, 40); // Coordenadas para el botón de eliminar cargo
         btnEliminarCargo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -62,7 +62,7 @@ public class MenuEliminar extends JFrame {
 
         // Crear el botón "Regresar"
         JButton btnRegresar = new JButton("Regresar");
-        btnRegresar.setBounds(30, 340, 100, 30); // Establecer las coordenadas para el botón "Regresar"
+        btnRegresar.setBounds(30, 250, 100, 30); // Establecer las coordenadas para el botón "Regresar"
         btnRegresar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

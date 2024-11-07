@@ -8,7 +8,7 @@ public class MenuVisualizar extends JFrame {
     public MenuVisualizar() {
         // Configuración de la ventana
         setTitle("Menú Visualizar");
-        setSize(600, 430);
+        setSize(500, 350);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(null); // Usamos setLayout(null) para usar coordenadas absolutas
@@ -22,26 +22,26 @@ public class MenuVisualizar extends JFrame {
         JLabel lblTitulo = new JLabel("¿Qué desea visualizar?", SwingConstants.CENTER);
         lblTitulo.setFont(new Font("Georgia", Font.BOLD, 24));
         lblTitulo.setForeground(Color.BLACK); // Color del texto
-        lblTitulo.setBounds(150, 20, 300, 40); // Establecer las coordenadas y tamaño del título
+        lblTitulo.setBounds(100, 20, 300, 40); // Establecer las coordenadas y tamaño del título
         add(lblTitulo); // Añadir el JLabel al JFrame
 
         // Crear los botones y establecer sus coordenadas para visualizar
         JButton btnVisualizarCliente = new JButton("Visualizar Clientes");
-        btnVisualizarCliente.setBounds(200, 80, 200, 40); // Coordenadas para el botón de visualizar cliente
+        btnVisualizarCliente.setBounds(150, 80, 200, 40); // Coordenadas para el botón de visualizar cliente
         add(btnVisualizarCliente); // Añadir el botón al JFrame
 
         JButton btnVisualizarColaborador = new JButton("Visualizar Colaboradores");
-        btnVisualizarColaborador.setBounds(200, 130, 200, 40); // Coordenadas para el botón de visualizar colaborador
+        btnVisualizarColaborador.setBounds(150, 130, 200, 40); // Coordenadas para el botón de visualizar colaborador
         add(btnVisualizarColaborador); // Añadir el botón al JFrame
 
         JButton btnVisualizarCargo = new JButton("Visualizar Cargos");
-        btnVisualizarCargo.setBounds(200, 180, 200, 40); // Coordenadas para el botón de visualizar cargo
+        btnVisualizarCargo.setBounds(150, 180, 200, 40); // Coordenadas para el botón de visualizar cargo
         add(btnVisualizarCargo); // Añadir el botón al JFrame
 
       
     // Crear el botón "Regresar"
     JButton btnRegresar = new JButton("Regresar");
-    btnRegresar.setBounds(30, 340, 100, 30); // Establecer las coordenadas para el botón "Regresar"
+    btnRegresar.setBounds(30, 250, 100, 30); // Establecer las coordenadas para el botón "Regresar"
     btnRegresar.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {

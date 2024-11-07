@@ -8,7 +8,7 @@ public class MenuActualizar extends JFrame {
     public MenuActualizar() {
         // Configuración de la ventana
         setTitle("Menú Actualizar");
-        setSize(600, 430);
+        setSize(500, 350);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(null); // Usamos setLayout(null) para usar coordenadas absolutas
@@ -22,25 +22,25 @@ public class MenuActualizar extends JFrame {
         JLabel lblTitulo = new JLabel("¿Qué desea actualizar?", SwingConstants.CENTER);
         lblTitulo.setFont(new Font("Georgia", Font.BOLD, 24));
         lblTitulo.setForeground(Color.BLACK); // Color del texto
-        lblTitulo.setBounds(150, 20, 300, 40); // Establecer las coordenadas y tamaño del título
+        lblTitulo.setBounds(100, 20, 300, 40); // Establecer las coordenadas y tamaño del título
         add(lblTitulo); // Añadir el JLabel al JFrame
 
         // Crear los botones y establecer sus coordenadas para actualizar
         JButton btnActualizarCliente = new JButton("Actualizar Cliente");
-        btnActualizarCliente.setBounds(200, 80, 200, 40); // Coordenadas para el botón de actualizar cliente
+        btnActualizarCliente.setBounds(150, 80, 200, 40); // Coordenadas para el botón de actualizar cliente
         add(btnActualizarCliente); // Añadir el botón al JFrame
 
         JButton btnActualizarColaborador = new JButton("Actualizar Colaborador");
-        btnActualizarColaborador.setBounds(200, 130, 200, 40); // Coordenadas para el botón de actualizar colaborador
+        btnActualizarColaborador.setBounds(150, 130, 200, 40); // Coordenadas para el botón de actualizar colaborador
         add(btnActualizarColaborador); // Añadir el botón al JFrame
 
         JButton btnActualizarCargo = new JButton("Actualizar Cargo");
-        btnActualizarCargo.setBounds(200, 180, 200, 40); // Coordenadas para el botón de actualizar cargo
+        btnActualizarCargo.setBounds(150, 180, 200, 40); // Coordenadas para el botón de actualizar cargo
         add(btnActualizarCargo); // Añadir el botón al JFrame
 
             // Crear el botón "Regresar"
     JButton btnRegresar = new JButton("Regresar");
-    btnRegresar.setBounds(30, 340, 100, 30); // Establecer las coordenadas para el botón "Regresar"
+    btnRegresar.setBounds(30, 250, 100, 30); // Establecer las coordenadas para el botón "Regresar"
     btnRegresar.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
