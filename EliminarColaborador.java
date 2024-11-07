@@ -18,6 +18,7 @@ public class EliminarColaborador extends JFrame {
         setTitle("Eliminar Colaborador");
         setSize(370, 200);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        getContentPane().setBackground(new Color(151, 204, 233 ));
         setLocationRelativeTo(null);
         setLayout(null);
 
@@ -35,6 +36,7 @@ public class EliminarColaborador extends JFrame {
 
         txtIdColaborador = new JTextField();
         txtIdColaborador.setBounds(160, 50, 160, 30);
+        txtIdColaborador.setBackground(new Color(199, 235, 255)); 
         add(txtIdColaborador);
 
         // Botón para eliminar el colaborador

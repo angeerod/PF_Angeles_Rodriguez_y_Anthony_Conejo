@@ -13,6 +13,7 @@ public class ConsultarClientes extends JFrame {
         setSize(700, 400);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
+        getContentPane().setBackground(new Color(151, 204, 233 ));
 
         // Configurar el modelo de la tabla
         String[] columnNames = {"Cédula", "Nombre1", "Nombre2", "Apellido1", "Apellido2", "Teléfono"};

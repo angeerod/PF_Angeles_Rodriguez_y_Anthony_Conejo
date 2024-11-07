@@ -9,6 +9,7 @@ public class MenuIngresar extends JFrame {
         // Configuración de la ventana
         setTitle("Menú Agregar");
         setSize(500, 350);
+        getContentPane().setBackground(new Color(151, 204, 233 ));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(null); // Usamos setLayout(null) para usar coordenadas absolutas

@@ -16,6 +16,7 @@ public class EliminarCargo extends JFrame {
         setTitle("Eliminar Cargo");
         setSize(350, 200);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        getContentPane().setBackground(new Color(151, 204, 233 ));
         setLocationRelativeTo(null);
         setLayout(null);
 
@@ -33,6 +34,7 @@ public class EliminarCargo extends JFrame {
 
         txtIdCargo = new JTextField();
         txtIdCargo.setBounds(160, 50, 150, 30);
+        txtIdCargo.setBackground(new Color(199, 235, 255)); 
         add(txtIdCargo);
 
         // Botón para eliminar el cargo

@@ -11,6 +11,7 @@ public class MenuPrincipal extends JFrame {
         setSize(600, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+        getContentPane().setBackground(new Color(151, 204, 233 ));
         setLayout(null); // Desactivamos el Layout Manager para posicionar los componentes con coordenadas
 
         // Crear el título de bienvenida

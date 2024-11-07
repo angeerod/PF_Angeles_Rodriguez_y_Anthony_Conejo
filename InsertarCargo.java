@@ -15,6 +15,7 @@ public class InsertarCargo extends JFrame {
         setTitle("Insertar Cargo");
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        getContentPane().setBackground(new Color(151, 204, 233 ));
         setLocationRelativeTo(null);
         setLayout(null);
 
@@ -30,6 +31,7 @@ public class InsertarCargo extends JFrame {
         add(lblIdCargo);
         txtIdCargo = new JTextField();
         txtIdCargo.setBounds(200, 50, 150, 25);
+        txtIdCargo.setBackground(new Color(199, 235, 255)); 
         add(txtIdCargo);
 
         JLabel lblNombre = new JLabel("Nombre:");
@@ -37,6 +39,7 @@ public class InsertarCargo extends JFrame {
         add(lblNombre);
         txtNombre = new JTextField();
         txtNombre.setBounds(200, 100, 150, 25);
+        txtNombre.setBackground(new Color(199, 235, 255)); 
         add(txtNombre);
 
         JLabel lblSalario = new JLabel("Salario:");
@@ -44,6 +47,7 @@ public class InsertarCargo extends JFrame {
         add(lblSalario);
         txtSalario = new JTextField();
         txtSalario.setBounds(200, 150, 150, 25);
+        txtSalario.setBackground(new Color(199, 235, 255)); 
         add(txtSalario);
 
         JButton btnInsertar = new JButton("Insertar Cargo");

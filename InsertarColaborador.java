@@ -15,6 +15,7 @@ public class InsertarColaborador extends JFrame {
         setTitle("Insertar Colaborador");
         setSize(400, 420);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        getContentPane().setBackground(new Color(151, 204, 233)); // Color de fondo de la ventana
         setLocationRelativeTo(null);
         setLayout(null);
 
@@ -25,11 +26,13 @@ public class InsertarColaborador extends JFrame {
          lblTitulo.setBounds(50, 5, 300, 40); // Establecer las coordenadas y tamaño del título
          add(lblTitulo); // Añadir el JLabel al JFrame
 
+        // Configuración de los campos de texto (JTextField) con color de fondo
         JLabel lblIdColaborador = new JLabel("ID Colaborador:");
         lblIdColaborador.setBounds(50, 50, 150, 25);
         add(lblIdColaborador);
         txtIdColaborador = new JTextField();
         txtIdColaborador.setBounds(200, 50, 150, 25);
+        txtIdColaborador.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
         add(txtIdColaborador);
 
         JLabel lblIdCargo = new JLabel("ID Cargo:");
@@ -37,6 +40,7 @@ public class InsertarColaborador extends JFrame {
         add(lblIdCargo);
         txtIdCargo = new JTextField();
         txtIdCargo.setBounds(200, 90, 150, 25);
+        txtIdCargo.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
         add(txtIdCargo);
 
         JLabel lblNombre1 = new JLabel("Primer Nombre:");
@@ -44,6 +48,7 @@ public class InsertarColaborador extends JFrame {
         add(lblNombre1);
         txtNombre1 = new JTextField();
         txtNombre1.setBounds(200, 130, 150, 25);
+        txtNombre1.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
         add(txtNombre1);
 
         JLabel lblNombre2 = new JLabel("Segundo Nombre:");
@@ -51,6 +56,7 @@ public class InsertarColaborador extends JFrame {
         add(lblNombre2);
         txtNombre2 = new JTextField();
         txtNombre2.setBounds(200, 170, 150, 25);
+        txtNombre2.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
         add(txtNombre2);
 
         JLabel lblApellido1 = new JLabel("Primer Apellido:");
@@ -58,6 +64,7 @@ public class InsertarColaborador extends JFrame {
         add(lblApellido1);
         txtApellido1 = new JTextField();
         txtApellido1.setBounds(200, 210, 150, 25);
+        txtApellido1.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
         add(txtApellido1);
 
         JLabel lblApellido2 = new JLabel("Segundo Apellido:");
@@ -65,6 +72,7 @@ public class InsertarColaborador extends JFrame {
         add(lblApellido2);
         txtApellido2 = new JTextField();
         txtApellido2.setBounds(200, 250, 150, 25);
+        txtApellido2.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
         add(txtApellido2);
 
         JLabel lblTelefono = new JLabel("Teléfono:");
@@ -72,6 +80,7 @@ public class InsertarColaborador extends JFrame {
         add(lblTelefono);
         txtTelefono = new JTextField();
         txtTelefono.setBounds(200, 290, 150, 25);
+        txtTelefono.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
         add(txtTelefono);
 
         JButton btnInsertar = new JButton("Insertar Colaborador");

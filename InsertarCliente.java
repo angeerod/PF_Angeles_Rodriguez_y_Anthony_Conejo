@@ -20,6 +20,7 @@ public class InsertarCliente extends JFrame {
         setTitle("Insertar Cliente");
         setSize(400, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        getContentPane().setBackground(new Color(151, 204, 233 ));
         setLocationRelativeTo(null);
         setLayout(null); // Usar layout nulo para posiciones absolutas
 
@@ -36,6 +37,7 @@ public class InsertarCliente extends JFrame {
         add(lblCedula);
         txtCedula = new JTextField();
         txtCedula.setBounds(200, 50, 150, 25);
+        txtCedula.setBackground(new Color(199, 235, 255)); 
         add(txtCedula);
 
         JLabel lblNombre1 = new JLabel("Primer Nombre:");
@@ -43,6 +45,7 @@ public class InsertarCliente extends JFrame {
         add(lblNombre1);
         txtNombre1 = new JTextField();
         txtNombre1.setBounds(200, 90, 150, 25);
+        txtNombre1.setBackground(new Color(199, 235, 255)); 
         add(txtNombre1);
 
         JLabel lblNombre2 = new JLabel("Segundo Nombre:");
@@ -50,6 +53,7 @@ public class InsertarCliente extends JFrame {
         add(lblNombre2);
         txtNombre2 = new JTextField();
         txtNombre2.setBounds(200, 130, 150, 25);
+        txtNombre2.setBackground(new Color(199, 235, 255)); 
         add(txtNombre2);
 
         JLabel lblApellido1 = new JLabel("Primer Apellido:");
@@ -57,6 +61,7 @@ public class InsertarCliente extends JFrame {
         add(lblApellido1);
         txtApellido1 = new JTextField();
         txtApellido1.setBounds(200, 170, 150, 25);
+        txtApellido1.setBackground(new Color(199, 235, 255)); 
         add(txtApellido1);
 
         JLabel lblApellido2 = new JLabel("Segundo Apellido:");
@@ -64,6 +69,7 @@ public class InsertarCliente extends JFrame {
         add(lblApellido2);
         txtApellido2 = new JTextField();
         txtApellido2.setBounds(200, 210, 150, 25);
+        txtApellido2.setBackground(new Color(199, 235, 255)); 
         add(txtApellido2);
 
         JLabel lblTelefono = new JLabel("Teléfono:");
@@ -71,6 +77,7 @@ public class InsertarCliente extends JFrame {
         add(lblTelefono);
         txtTelefono = new JTextField();
         txtTelefono.setBounds(200, 250, 150, 25);
+        txtTelefono.setBackground(new Color(199, 235, 255)); 
         add(txtTelefono);
 
         // Botón para insertar el cliente

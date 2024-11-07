@@ -10,6 +10,7 @@ public class MenuConsultar extends JFrame {
         setTitle("Menú Consultar");
         setSize(500, 350);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        getContentPane().setBackground(new Color(151, 204, 233 ));
         setLocationRelativeTo(null);
         setLayout(null); // Usamos coordenadas absolutas
 

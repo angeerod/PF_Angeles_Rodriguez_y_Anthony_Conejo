@@ -14,7 +14,8 @@ public class ConsultarCargos extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout()); // Usamos BorderLayout para organizar los componentes
-
+        getContentPane().setBackground(new Color(151, 204, 233 ));
+        
         // Configurar el modelo de la tabla
         String[] columnNames = {"Id Cargo", "Nombre", "Salario"};
         DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);

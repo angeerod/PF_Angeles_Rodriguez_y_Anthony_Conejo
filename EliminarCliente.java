@@ -17,6 +17,7 @@ public class EliminarCliente extends JFrame {
         setTitle("Eliminar Cliente");
         setSize(350, 200);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        getContentPane().setBackground(new Color(151, 204, 233 ));
         setLocationRelativeTo(null);
         setLayout(null);
 
@@ -34,6 +35,7 @@ public class EliminarCliente extends JFrame {
 
         txtCedula = new JTextField();
         txtCedula.setBounds(160, 50, 150, 30);
+        txtCedula.setBackground(new Color(199, 235, 255)); 
         add(txtCedula);
 
         // Botón para eliminar el cliente

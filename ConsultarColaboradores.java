@@ -12,6 +12,7 @@ public class ConsultarColaboradores extends JFrame {
         setTitle("Lista de Colaboradores");
         setSize(700, 400);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        getContentPane().setBackground(new Color(151, 204, 233 ));
         setLocationRelativeTo(null);
         setLayout(new BorderLayout()); // Usamos BorderLayout para organizar los componentes
 
