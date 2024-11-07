@@ -76,7 +76,7 @@ public class EliminarCliente extends JFrame {
 
         try {
             // Conectar a la base de datos
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/basetienda?verifyServerCertificate=false&useSSL=true", "root", "tu_contraseña");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/basetienda?verifyServerCertificate=false&useSSL=true", "root", "angee2701");
 
             // Llamar al procedimiento almacenado
             String query = "{CALL EliminarCliente(?)}";
