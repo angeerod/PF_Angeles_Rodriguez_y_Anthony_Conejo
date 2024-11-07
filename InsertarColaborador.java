@@ -33,6 +33,7 @@ public class InsertarColaborador extends JFrame {
         txtIdColaborador = new JTextField();
         txtIdColaborador.setBounds(200, 50, 150, 25);
         txtIdColaborador.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
+        txtIdColaborador.setToolTipText("Ingrese el ID del colaborador."); // Tooltip
         add(txtIdColaborador);
 
         JLabel lblIdCargo = new JLabel("ID Cargo:");
@@ -41,6 +42,7 @@ public class InsertarColaborador extends JFrame {
         txtIdCargo = new JTextField();
         txtIdCargo.setBounds(200, 90, 150, 25);
         txtIdCargo.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
+        txtIdCargo.setToolTipText("Ingrese el ID del cargo."); // Tooltip
         add(txtIdCargo);
 
         JLabel lblNombre1 = new JLabel("Primer Nombre:");
@@ -49,6 +51,7 @@ public class InsertarColaborador extends JFrame {
         txtNombre1 = new JTextField();
         txtNombre1.setBounds(200, 130, 150, 25);
         txtNombre1.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
+        txtNombre1.setToolTipText("Ingrese el primer nombre del colaborador."); // Tooltip
         add(txtNombre1);
 
         JLabel lblNombre2 = new JLabel("Segundo Nombre:");
@@ -57,6 +60,7 @@ public class InsertarColaborador extends JFrame {
         txtNombre2 = new JTextField();
         txtNombre2.setBounds(200, 170, 150, 25);
         txtNombre2.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
+        txtNombre2.setToolTipText("Ingrese el segundo nombre del colaborador."); // Tooltip
         add(txtNombre2);
 
         JLabel lblApellido1 = new JLabel("Primer Apellido:");
@@ -65,6 +69,7 @@ public class InsertarColaborador extends JFrame {
         txtApellido1 = new JTextField();
         txtApellido1.setBounds(200, 210, 150, 25);
         txtApellido1.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
+        txtApellido1.setToolTipText("Ingrese el primer apellido del colaborador."); // Tooltip
         add(txtApellido1);
 
         JLabel lblApellido2 = new JLabel("Segundo Apellido:");
@@ -73,6 +78,7 @@ public class InsertarColaborador extends JFrame {
         txtApellido2 = new JTextField();
         txtApellido2.setBounds(200, 250, 150, 25);
         txtApellido2.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
+        txtApellido2.setToolTipText("Ingrese el segundo apellido del colaborador."); // Tooltip
         add(txtApellido2);
 
         JLabel lblTelefono = new JLabel("Teléfono:");
@@ -81,6 +87,7 @@ public class InsertarColaborador extends JFrame {
         txtTelefono = new JTextField();
         txtTelefono.setBounds(200, 290, 150, 25);
         txtTelefono.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
+        txtTelefono.setToolTipText("Ingrese el número de teléfono del colaborador."); // Tooltip
         add(txtTelefono);
 
         JButton btnInsertar = new JButton("Insertar Colaborador");
