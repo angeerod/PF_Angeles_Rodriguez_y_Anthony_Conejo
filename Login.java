@@ -93,9 +93,13 @@ public class Login extends JFrame {
 
                 if (validarUsuario(usuario, contrasenaStr)) {
                     JOptionPane.showMessageDialog(null, "Autenticación exitosa.");
-                    // Aquí puedes abrir la siguiente ventana después de la autenticación exitosa.
-                    // Por ejemplo: new MenuPrincipal().setVisible(true);
-                    // dispose(); // Cerrar la ventana de login
+                    
+                    // Abrir la ventana MenuPrincipal
+                    MenuPrincipal menu = new MenuPrincipal();
+                    menu.setVisible(true);
+
+                    // Cerrar la ventana de login
+                    dispose();
                 } else {
                     JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos.");
                 }
