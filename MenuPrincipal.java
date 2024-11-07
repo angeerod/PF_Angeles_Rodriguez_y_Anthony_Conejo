@@ -98,8 +98,8 @@ public class MenuPrincipal extends JFrame {
     }
 
     private void abrirMenuVisualizar() {
-        MenuVisualizar menuVisualizar = new MenuVisualizar(); // Crear la ventana de visualizar
-        menuVisualizar.setVisible(true);
+        MenuConsultar menuConsultar = new MenuConsultar(); // Crear la ventana de visualizar
+        menuConsultar.setVisible(true);
         this.dispose(); // Cierra la ventana de inicio
     }
 
