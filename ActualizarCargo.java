@@ -92,4 +92,11 @@ public class ActualizarCargo extends JFrame {
         menuActualizar.setVisible(true);
         this.dispose();
     }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            ActualizarCargo app = new ActualizarCargo();
+            app.setVisible(true);
+        });
+    }
 }
