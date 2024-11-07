@@ -65,6 +65,7 @@ public class Login extends JFrame {
         // Campo de texto para el usuario
         txtUsuario = new JTextField();
         txtUsuario.setBounds(180, 150, 140, 25);
+        txtUsuario.setToolTipText("Ingrese su nombre de usuario");  // Tooltip
         panelCentro.add(txtUsuario);
 
         // Etiqueta de contraseña
@@ -76,11 +77,13 @@ public class Login extends JFrame {
         // Campo de texto para la contraseña
         txtContrasena = new JPasswordField();
         txtContrasena.setBounds(180, 200, 140, 25);
+        txtContrasena.setToolTipText("Ingrese su contraseña");  // Tooltip
         panelCentro.add(txtContrasena);
 
         // Botón de autenticación
         JButton btnLogin = new JButton("Iniciar sesión");
         btnLogin.setBounds(130, 250, 150, 30);
+        btnLogin.setToolTipText("Haz clic para iniciar sesión");  // Tooltip
         panelCentro.add(btnLogin);
 
         // Acción del botón de autenticación

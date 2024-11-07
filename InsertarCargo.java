@@ -15,16 +15,16 @@ public class InsertarCargo extends JFrame {
         setTitle("Insertar Cargo");
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        getContentPane().setBackground(new Color(151, 204, 233 ));
+        getContentPane().setBackground(new Color(151, 204, 233));
         setLocationRelativeTo(null);
         setLayout(null);
 
-         // Crear el título
-         JLabel lblTitulo = new JLabel("Ingrese los datos del cargo:", SwingConstants.CENTER);
-         lblTitulo.setFont(new Font("Georgia", Font.BOLD, 14));
-         lblTitulo.setForeground(Color.BLACK); // Color del texto
-         lblTitulo.setBounds(50, 5, 300, 40); // Establecer las coordenadas y tamaño del título
-         add(lblTitulo); // Añadir el JLabel al JFrame
+        // Crear el título
+        JLabel lblTitulo = new JLabel("Ingrese los datos del cargo:", SwingConstants.CENTER);
+        lblTitulo.setFont(new Font("Georgia", Font.BOLD, 14));
+        lblTitulo.setForeground(Color.BLACK); // Color del texto
+        lblTitulo.setBounds(50, 5, 300, 40); // Establecer las coordenadas y tamaño del título
+        add(lblTitulo); // Añadir el JLabel al JFrame
 
         JLabel lblIdCargo = new JLabel("ID Cargo:");
         lblIdCargo.setBounds(50, 50, 150, 25);
@@ -32,6 +32,7 @@ public class InsertarCargo extends JFrame {
         txtIdCargo = new JTextField();
         txtIdCargo.setBounds(200, 50, 150, 25);
         txtIdCargo.setBackground(new Color(199, 235, 255)); 
+        txtIdCargo.setToolTipText("Ingrese el ID del cargo.");
         add(txtIdCargo);
 
         JLabel lblNombre = new JLabel("Nombre:");
@@ -40,6 +41,7 @@ public class InsertarCargo extends JFrame {
         txtNombre = new JTextField();
         txtNombre.setBounds(200, 100, 150, 25);
         txtNombre.setBackground(new Color(199, 235, 255)); 
+        txtNombre.setToolTipText("Ingrese el nombre del cargo.");
         add(txtNombre);
 
         JLabel lblSalario = new JLabel("Salario:");
@@ -48,15 +50,18 @@ public class InsertarCargo extends JFrame {
         txtSalario = new JTextField();
         txtSalario.setBounds(200, 150, 150, 25);
         txtSalario.setBackground(new Color(199, 235, 255)); 
+        txtSalario.setToolTipText("Ingrese el salario del cargo.");
         add(txtSalario);
 
         JButton btnInsertar = new JButton("Insertar Cargo");
         btnInsertar.setBounds(200, 200, 150, 30);
+        btnInsertar.setToolTipText("Haz clic para insertar el cargo.");
         btnInsertar.addActionListener(e -> insertarCargo());
         add(btnInsertar);
 
         btnRegresar = new JButton("Regresar");
         btnRegresar.setBounds(50, 200, 100, 30);
+        btnRegresar.setToolTipText("Haz clic para regresar al menú.");
         btnRegresar.addActionListener(e -> regresarAlMenu());
         add(btnRegresar);
     }
@@ -92,4 +97,3 @@ public class InsertarCargo extends JFrame {
         this.dispose();
     }
 }
-

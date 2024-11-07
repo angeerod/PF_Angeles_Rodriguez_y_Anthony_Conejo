@@ -11,7 +11,7 @@ public class MenuPrincipal extends JFrame {
         setSize(600, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-        getContentPane().setBackground(new Color(151, 204, 233 ));
+        getContentPane().setBackground(new Color(151, 204, 233)); // Fondo celeste
         setLayout(null); // Desactivamos el Layout Manager para posicionar los componentes con coordenadas
 
         // Crear el título de bienvenida
@@ -27,10 +27,11 @@ public class MenuPrincipal extends JFrame {
         lblSeleccion.setBounds(50, 60, 500, 40); // Establecer las coordenadas y tamaño del título
         lblSeleccion.setOpaque(false); // Asegúrate de que el JLabel es transparente
 
-        // Crear el botón "Ingresar"
+        // Crear el botón "Agregar"
         JButton btnIngresar = new JButton("Agregar");
         btnIngresar.setFont(new Font("Arial", Font.BOLD, 12));
         btnIngresar.setBounds(240, 120, 100, 30); // Establecer las coordenadas y tamaño del botón
+        btnIngresar.setToolTipText("Haz clic para agregar un nuevo elemento"); // Tooltip
         btnIngresar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -42,6 +43,7 @@ public class MenuPrincipal extends JFrame {
         JButton btnEliminar = new JButton("Eliminar");
         btnEliminar.setFont(new Font("Arial", Font.BOLD, 12));
         btnEliminar.setBounds(240, 170, 100, 30); // Establecer las coordenadas y tamaño del botón
+        btnEliminar.setToolTipText("Haz clic para eliminar un elemento"); // Tooltip
         btnEliminar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -53,6 +55,7 @@ public class MenuPrincipal extends JFrame {
         JButton btnActualizar = new JButton("Actualizar");
         btnActualizar.setFont(new Font("Arial", Font.BOLD, 12));
         btnActualizar.setBounds(240, 220, 100, 30); // Establecer las coordenadas y tamaño del botón
+        btnActualizar.setToolTipText("Haz clic para actualizar un elemento"); // Tooltip
         btnActualizar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -64,6 +67,7 @@ public class MenuPrincipal extends JFrame {
         JButton btnVisualizar = new JButton("Visualizar");
         btnVisualizar.setFont(new Font("Arial", Font.BOLD, 12));
         btnVisualizar.setBounds(240, 270, 100, 30); // Establecer las coordenadas y tamaño del botón
+        btnVisualizar.setToolTipText("Haz clic para visualizar los elementos"); // Tooltip
         btnVisualizar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

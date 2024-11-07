@@ -93,10 +93,12 @@ public class InsertarColaborador extends JFrame {
         JButton btnInsertar = new JButton("Insertar Colaborador");
         btnInsertar.setBounds(200, 330, 150, 30);
         btnInsertar.addActionListener(e -> insertarColaborador());
+        btnInsertar.setToolTipText("Haz clic para insertar el colaborador.");
         add(btnInsertar);
 
         btnRegresar = new JButton("Regresar");
         btnRegresar.setBounds(50, 330, 100, 30);
+        btnRegresar.setToolTipText("Haz clic para regresar al menú.");
         btnRegresar.addActionListener(e -> regresarAlMenu());
         add(btnRegresar);
     }

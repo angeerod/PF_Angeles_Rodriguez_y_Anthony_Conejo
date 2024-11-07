@@ -3,7 +3,6 @@ import java.sql.DriverManager;
 import java.sql.CallableStatement;
 import java.sql.SQLException;
 import javax.swing.*;
-
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -20,17 +19,17 @@ public class InsertarCliente extends JFrame {
         setTitle("Insertar Cliente");
         setSize(400, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        getContentPane().setBackground(new Color(151, 204, 233 ));
+        getContentPane().setBackground(new Color(151, 204, 233));
         setLocationRelativeTo(null);
         setLayout(null); // Usar layout nulo para posiciones absolutas
 
-           // Crear el título
-           JLabel lblTitulo = new JLabel("Ingrese los datos del cliente:", SwingConstants.CENTER);
-           lblTitulo.setFont(new Font("Georgia", Font.BOLD, 14));
-           lblTitulo.setForeground(Color.BLACK); // Color del texto
-           lblTitulo.setBounds(50, 5, 300, 40); // Establecer las coordenadas y tamaño del título
-           add(lblTitulo); // Añadir el JLabel al JFrame
-           
+        // Crear el título
+        JLabel lblTitulo = new JLabel("Ingrese los datos del cliente:", SwingConstants.CENTER);
+        lblTitulo.setFont(new Font("Georgia", Font.BOLD, 14));
+        lblTitulo.setForeground(Color.BLACK); // Color del texto
+        lblTitulo.setBounds(50, 5, 300, 40); // Establecer las coordenadas y tamaño del título
+        add(lblTitulo); // Añadir el JLabel al JFrame
+        
         // Crear y añadir etiquetas y campos de texto con coordenadas personalizadas
         JLabel lblCedula = new JLabel("Cédula:");
         lblCedula.setBounds(50, 50, 150, 25);
@@ -38,6 +37,7 @@ public class InsertarCliente extends JFrame {
         txtCedula = new JTextField();
         txtCedula.setBounds(200, 50, 150, 25);
         txtCedula.setBackground(new Color(199, 235, 255)); 
+        txtCedula.setToolTipText("Ingrese la cédula del cliente.");
         add(txtCedula);
 
         JLabel lblNombre1 = new JLabel("Primer Nombre:");
@@ -46,6 +46,7 @@ public class InsertarCliente extends JFrame {
         txtNombre1 = new JTextField();
         txtNombre1.setBounds(200, 90, 150, 25);
         txtNombre1.setBackground(new Color(199, 235, 255)); 
+        txtNombre1.setToolTipText("Ingrese el primer nombre del cliente.");
         add(txtNombre1);
 
         JLabel lblNombre2 = new JLabel("Segundo Nombre:");
@@ -54,6 +55,7 @@ public class InsertarCliente extends JFrame {
         txtNombre2 = new JTextField();
         txtNombre2.setBounds(200, 130, 150, 25);
         txtNombre2.setBackground(new Color(199, 235, 255)); 
+        txtNombre2.setToolTipText("Ingrese el segundo nombre del cliente.");
         add(txtNombre2);
 
         JLabel lblApellido1 = new JLabel("Primer Apellido:");
@@ -62,6 +64,7 @@ public class InsertarCliente extends JFrame {
         txtApellido1 = new JTextField();
         txtApellido1.setBounds(200, 170, 150, 25);
         txtApellido1.setBackground(new Color(199, 235, 255)); 
+        txtApellido1.setToolTipText("Ingrese el primer apellido del cliente.");
         add(txtApellido1);
 
         JLabel lblApellido2 = new JLabel("Segundo Apellido:");
@@ -70,6 +73,7 @@ public class InsertarCliente extends JFrame {
         txtApellido2 = new JTextField();
         txtApellido2.setBounds(200, 210, 150, 25);
         txtApellido2.setBackground(new Color(199, 235, 255)); 
+        txtApellido2.setToolTipText("Ingrese el segundo apellido del cliente.");
         add(txtApellido2);
 
         JLabel lblTelefono = new JLabel("Teléfono:");
@@ -78,11 +82,13 @@ public class InsertarCliente extends JFrame {
         txtTelefono = new JTextField();
         txtTelefono.setBounds(200, 250, 150, 25);
         txtTelefono.setBackground(new Color(199, 235, 255)); 
+        txtTelefono.setToolTipText("Ingrese el número de teléfono del cliente.");
         add(txtTelefono);
 
         // Botón para insertar el cliente
         JButton btnInsertar = new JButton("Insertar Cliente");
         btnInsertar.setBounds(200, 290, 150, 30);
+        btnInsertar.setToolTipText("Haz clic para insertar el cliente.");
         btnInsertar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -94,6 +100,7 @@ public class InsertarCliente extends JFrame {
         // Botón de regresar al menú principal
         btnRegresar = new JButton("Regresar");
         btnRegresar.setBounds(50, 290, 100, 30);
+        btnRegresar.setToolTipText("Haz clic para regresar al menú.");
         btnRegresar.addActionListener(e -> regresarAlMenu());
         add(btnRegresar);
     }
