@@ -11,7 +11,7 @@ public class Login extends JFrame {
 
     public Login() {
         // Configuración de la ventana
-        setTitle("Autenticación");
+        setTitle("Login");
         setSize(700, 550);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);  // Centrar la ventana en la pantalla
@@ -37,38 +37,50 @@ public class Login extends JFrame {
         JPanel panelCentro = new JPanel();
         panelCentro.setLayout(null);  // Usar coordenadas absolutas en este panel
         panelCentro.setBackground(new Color(61, 159, 205, 100));  // Celeste con 50% de transparencia (alpha = 128)
-        panelCentro.setBounds(150, 100, 400, 300);  // Posición y tamaño del panel celeste
+        panelCentro.setBounds(150, 100, 400, 320);  // Posición y tamaño del panel celeste
         panelFondo.add(panelCentro);  // Agregar el panel celeste sobre la imagen de fondo
+
+        // Cargar el icono y redimensionarlo
+        ImageIcon iconoLogin = new ImageIcon("imagenes\\iconlogin.png");
+        Image iconoRedimensionado = iconoLogin.getImage().getScaledInstance(70, 70, Image.SCALE_SMOOTH);  // Redimensionar
+        JLabel lblIcono = new JLabel(new ImageIcon(iconoRedimensionado));
+        
+        // Posicionar el icono en la parte superior del panel
+        lblIcono.setBounds(170, 15, 70, 70);  // Ajustar posición del icono
+        panelCentro.add(lblIcono);  // Añadir el icono al panel
 
         // Título
         JLabel lblLogin = new JLabel("Login:");
-        lblLogin.setBounds(165, 40, 100, 25);
+        lblLogin.setBounds(165, 100, 100, 25);  // Ajustar posición debajo del icono
+        lblLogin.setForeground(new Color(8, 68, 102));  
         lblLogin.setFont(new Font("Georgia", Font.BOLD, 24));
         panelCentro.add(lblLogin);
 
         // Etiqueta de usuario
         JLabel lblUsuario = new JLabel("Usuario:");
-        lblUsuario.setBounds(90, 100, 100, 25);
+        lblUsuario.setBounds(90, 150, 100, 25);
+        lblUsuario.setForeground(new Color(8, 68, 102));  
         panelCentro.add(lblUsuario);
 
         // Campo de texto para el usuario
         txtUsuario = new JTextField();
-        txtUsuario.setBounds(180, 100, 140, 25);
+        txtUsuario.setBounds(180, 150, 140, 25);
         panelCentro.add(txtUsuario);
 
         // Etiqueta de contraseña
         JLabel lblContrasena = new JLabel("Contraseña:");
-        lblContrasena.setBounds(90, 150, 100, 25);
+        lblContrasena.setBounds(90, 200, 100, 25);
+        lblContrasena.setForeground(new Color(8, 68, 102));  
         panelCentro.add(lblContrasena);
 
         // Campo de texto para la contraseña
         txtContrasena = new JPasswordField();
-        txtContrasena.setBounds(180, 150, 140, 25);
+        txtContrasena.setBounds(180, 200, 140, 25);
         panelCentro.add(txtContrasena);
 
         // Botón de autenticación
         JButton btnLogin = new JButton("Iniciar sesión");
-        btnLogin.setBounds(130, 200, 150, 30);
+        btnLogin.setBounds(130, 250, 150, 30);
         panelCentro.add(btnLogin);
 
         // Acción del botón de autenticación
