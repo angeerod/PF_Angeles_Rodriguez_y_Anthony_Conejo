@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 
 public class MenuIngresar extends JFrame {
 
+    ImageIcon iconoIngresar = new ImageIcon("imagenes/new.png");
+
     public MenuIngresar() {
         // Configuración de la ventana
         setTitle("Menú Agregar");
@@ -30,6 +32,7 @@ public class MenuIngresar extends JFrame {
         // Crear los botones y establecer sus coordenadas
         JButton btnInsertarCliente = new JButton("Agregar Cliente");
         btnInsertarCliente.setBounds(150, 80, 200, 40); // Coordenadas para el botón de insertar cliente
+        btnInsertarCliente.setIcon(iconoIngresar);
         btnInsertarCliente.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -40,6 +43,7 @@ public class MenuIngresar extends JFrame {
 
         JButton btnAgregarColaborador = new JButton("Agregar Colaborador");
         btnAgregarColaborador.setBounds(150, 130, 200, 40); // Coordenadas para el botón de agregar colaborador
+        btnAgregarColaborador.setIcon(iconoIngresar);
         btnAgregarColaborador.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -50,6 +54,7 @@ public class MenuIngresar extends JFrame {
 
         JButton btnAgregarCargo = new JButton("Agregar Cargo");
         btnAgregarCargo.setBounds(150, 180, 200, 40); // Coordenadas para el botón de agregar cargo
+        btnAgregarCargo.setIcon(iconoIngresar);
         btnAgregarCargo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
