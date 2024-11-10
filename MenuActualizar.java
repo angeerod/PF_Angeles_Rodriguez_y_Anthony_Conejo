@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 
 public class MenuActualizar extends JFrame {
 
+    ImageIcon iconoActualizar = new ImageIcon("imagenes/update.png");
+
     public MenuActualizar() {
         // Configuración de la ventana
         setTitle("Menú Actualizar");
@@ -29,6 +31,7 @@ public class MenuActualizar extends JFrame {
         // Crear los botones y establecer sus coordenadas para actualizar
         JButton btnActualizarCliente = new JButton("Actualizar Cliente");
         btnActualizarCliente.setBounds(150, 80, 200, 40); // Coordenadas para el botón de actualizar cliente
+        btnActualizarCliente.setIcon(iconoActualizar);
         btnActualizarCliente.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -39,6 +42,7 @@ public class MenuActualizar extends JFrame {
 
         JButton btnActualizarColaborador = new JButton("Actualizar Colaborador");
         btnActualizarColaborador.setBounds(150, 130, 200, 40); // Coordenadas para el botón de actualizar colaborador
+        btnActualizarColaborador.setIcon(iconoActualizar);
         btnActualizarColaborador.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -49,6 +53,7 @@ public class MenuActualizar extends JFrame {
 
         JButton btnActualizarCargo = new JButton("Actualizar Cargo");
         btnActualizarCargo.setBounds(150, 180, 200, 40); // Coordenadas para el botón de actualizar cargo
+        btnActualizarCargo.setIcon(iconoActualizar);
         btnActualizarCargo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
