@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 
 public class MenuEliminar extends JFrame {
 
+    ImageIcon iconoEliminar = new ImageIcon("imagenes/delete.png");
+
     public MenuEliminar() {
         // Configuración de la ventana
         setTitle("Menú Eliminar");
@@ -29,6 +31,7 @@ public class MenuEliminar extends JFrame {
         // Crear los botones y establecer sus coordenadas para eliminar
         JButton btnEliminarCliente = new JButton("Eliminar Cliente");
         btnEliminarCliente.setBounds(150, 80, 200, 40); // Coordenadas para el botón de eliminar cliente
+        btnEliminarCliente.setIcon(iconoEliminar);
         btnEliminarCliente.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -40,6 +43,7 @@ public class MenuEliminar extends JFrame {
 
         JButton btnEliminarColaborador = new JButton("Eliminar Colaborador");
         btnEliminarColaborador.setBounds(150, 130, 200, 40); // Coordenadas para el botón de eliminar colaborador
+        btnEliminarColaborador.setIcon(iconoEliminar);
         btnEliminarColaborador.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -51,6 +55,7 @@ public class MenuEliminar extends JFrame {
 
         JButton btnEliminarCargo = new JButton("Eliminar Cargo");
         btnEliminarCargo.setBounds(150, 180, 200, 40); // Coordenadas para el botón de eliminar cargo
+        btnEliminarCargo.setIcon(iconoEliminar);
         btnEliminarCargo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
