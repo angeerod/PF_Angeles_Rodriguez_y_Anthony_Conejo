@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 
 public class MenuActualizar extends JFrame {
 
+    ImageIcon iconoActualizar = new ImageIcon("imagenes/update.png");
+
     public MenuActualizar() {
         // Configuración de la ventana
         setTitle("Menú Actualizar");
@@ -30,16 +32,43 @@ public class MenuActualizar extends JFrame {
         JButton btnActualizarCliente = new JButton("Actualizar Cliente");
         btnActualizarCliente.setBounds(150, 80, 200, 40); // Coordenadas para el botón de actualizar cliente
         btnActualizarCliente.setToolTipText("Haz clic para actualizar los datos de un cliente"); // Tooltip
+        btnActualizarCliente.setIcon(iconoActualizar);
+        btnActualizarCliente.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                abrirVentanaActualizarCliente();
+            }
+        });
+
         add(btnActualizarCliente); // Añadir el botón al JFrame
 
         JButton btnActualizarColaborador = new JButton("Actualizar Colaborador");
         btnActualizarColaborador.setBounds(150, 130, 200, 40); // Coordenadas para el botón de actualizar colaborador
+
         btnActualizarColaborador.setToolTipText("Haz clic para actualizar los datos de un colaborador"); // Tooltip
+
+        btnActualizarColaborador.setIcon(iconoActualizar);
+        btnActualizarColaborador.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                abrirVentanaActualizarColaborador();
+            }
+        });
+
         add(btnActualizarColaborador); // Añadir el botón al JFrame
 
         JButton btnActualizarCargo = new JButton("Actualizar Cargo");
         btnActualizarCargo.setBounds(150, 180, 200, 40); // Coordenadas para el botón de actualizar cargo
         btnActualizarCargo.setToolTipText("Haz clic para actualizar los datos de un cargo"); // Tooltip
+
+        btnActualizarCargo.setIcon(iconoActualizar);
+        btnActualizarCargo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                abrirVentanaActualizarCargo();
+            }
+        });
+
         add(btnActualizarCargo); // Añadir el botón al JFrame
 
         // Crear el botón "Regresar"
@@ -55,6 +84,7 @@ public class MenuActualizar extends JFrame {
         add(btnRegresar); // Añadir el botón al JFrame
     }
 
+
     // Método para regresar al menú inicial
     private void regresarAlMenuPrincipal() {
         MenuPrincipal menuPrincipal = new MenuPrincipal();
@@ -62,7 +92,28 @@ public class MenuActualizar extends JFrame {
         this.dispose(); // Cerrar la ventana actual
     }
 
-    public static void main(String[] args) {
+
+
+private void abrirVentanaActualizarColaborador() {
+    ActualizarColaboradores ventanaColaborador = new ActualizarColaboradores();
+    ventanaColaborador.setVisible(true);
+    this.setVisible(false); // Ocultar la ventana de menú
+}
+
+private void abrirVentanaActualizarCliente() {
+    ActualizarCliente ventanaCliente = new ActualizarCliente();
+    ventanaCliente.setVisible(true);
+    this.setVisible(false); // Ocultar la ventana de menú
+}
+
+ // Método para abrir la ventana ActualizarCargo
+ private void abrirVentanaActualizarCargo() {
+    ActualizarCargo ventanaCargo = new ActualizarCargo();
+    ventanaCargo.setVisible(true);
+    this.setVisible(false); // Ocultar la ventana de menú
+}
+
+public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             MenuActualizar menuActualizar = new MenuActualizar();
             menuActualizar.setVisible(true);

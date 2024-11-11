@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 
 public class MenuConsultar extends JFrame {
 
+    ImageIcon iconoConsultar = new ImageIcon("imagenes/consulta.png");
+
     public MenuConsultar() {
         // Configuración de la ventana
         setTitle("Menú Consultar");
@@ -23,13 +25,21 @@ public class MenuConsultar extends JFrame {
         // Botón para visualizar clientes
         JButton btnVisualizarCliente = new JButton("Clientes");
         btnVisualizarCliente.setBounds(150, 80, 200, 40);
+
         btnVisualizarCliente.setToolTipText("Haz clic para visualizar la lista de clientes");
+
+        btnVisualizarCliente.setIcon(iconoConsultar);
+
         add(btnVisualizarCliente);
 
         // Botón para visualizar colaboradores
         JButton btnVisualizarColaborador = new JButton("Colaboradores");
         btnVisualizarColaborador.setBounds(150, 130, 200, 40);
+
         btnVisualizarColaborador.setToolTipText("Haz clic para visualizar la lista de colaboradores");
+
+        btnVisualizarColaborador.setIcon(iconoConsultar);
+
         btnVisualizarColaborador.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -42,6 +52,7 @@ public class MenuConsultar extends JFrame {
         // Botón para visualizar cargos
         JButton btnVisualizarCargo = new JButton("Cargos");
         btnVisualizarCargo.setBounds(150, 180, 200, 40);
+
         btnVisualizarCargo.setToolTipText("Haz clic para visualizar la lista de cargos");
         btnVisualizarCargo.addActionListener(new ActionListener() {
             @Override
@@ -50,6 +61,9 @@ public class MenuConsultar extends JFrame {
                 dispose(); // Cierra el menú visualizar
             }
         });
+
+        btnVisualizarCargo.setIcon(iconoConsultar);
+
         add(btnVisualizarCargo);
 
         // Botón para regresar
