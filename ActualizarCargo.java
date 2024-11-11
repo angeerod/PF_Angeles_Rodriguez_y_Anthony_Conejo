@@ -21,7 +21,7 @@ public class ActualizarCargo extends JFrame {
         setLayout(null);
 
          // Crear el título
-         JLabel lblTitulo = new JLabel("Actualice los datos del cargo:", SwingConstants.CENTER);
+         JLabel lblTitulo = new JLabel("Inserte los datos a actualizar:", SwingConstants.CENTER);
          lblTitulo.setFont(new Font("Georgia", Font.BOLD, 14));
          lblTitulo.setForeground(Color.BLACK); // Color del texto
          lblTitulo.setBounds(50, 5, 300, 40); // Establecer las coordenadas y tamaño del título
@@ -51,7 +51,7 @@ public class ActualizarCargo extends JFrame {
         txtSalario.setBackground(new Color(199, 235, 255)); 
         add(txtSalario);
 
-        JButton btnActualizar = new JButton("Actualice Cargo");
+        JButton btnActualizar = new JButton("Actualizar Cargo");
         btnActualizar.setBounds(200, 200, 150, 30);
         btnActualizar.addActionListener(e -> actualizarCargo());
         add(btnActualizar);
@@ -67,7 +67,7 @@ public class ActualizarCargo extends JFrame {
         String nombre = txtNombre.getText();
         int salario = Integer.parseInt(txtSalario.getText());
 
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/basetienda", "root", "TigreTony28!")) {
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/basetienda", "root", "angee2701")) {
             String query = "{CALL ActualizarCargos(?, ?, ?)}";
             CallableStatement statement = connection.prepareCall(query);
             statement.setString(1, idCargo);
