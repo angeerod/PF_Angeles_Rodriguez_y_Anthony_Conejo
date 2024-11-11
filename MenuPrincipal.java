@@ -69,11 +69,8 @@ public class MenuPrincipal extends JFrame {
         // Crear el botón "Actualizar"
         JButton btnActualizar = new JButton("Actualizar");
         btnActualizar.setFont(new Font("Arial", Font.BOLD, 12));
-
-        btnActualizar.setBounds(240, 220, 100, 30); // Establecer las coordenadas y tamaño del botón
         btnActualizar.setToolTipText("Haz clic para actualizar un elemento"); // Tooltip
-
-        btnActualizar.setBounds(240, 220, 140, 40); // Establecer las coordenadas y tamaño del botón
+        btnActualizar.setBounds(235, 220, 150, 40); // Establecer las coordenadas y tamaño del botón
         btnActualizar.setIcon(iconoActualizar);
 
         btnActualizar.addActionListener(new ActionListener() {
@@ -84,13 +81,10 @@ public class MenuPrincipal extends JFrame {
         });
 
         // Crear el botón "Visualizar"
-        JButton btnVisualizar = new JButton("Visualizar");
+        JButton btnVisualizar = new JButton("Consultar");
         btnVisualizar.setFont(new Font("Arial", Font.BOLD, 12));
-
-        btnVisualizar.setBounds(240, 270, 100, 30); // Establecer las coordenadas y tamaño del botón
         btnVisualizar.setToolTipText("Haz clic para visualizar los elementos"); // Tooltip
-
-        btnVisualizar.setBounds(240, 270, 140, 40); // Establecer las coordenadas y tamaño del botón
+        btnVisualizar.setBounds(235, 270, 150, 40); // Establecer las coordenadas y tamaño del botón
         btnVisualizar.setIcon(iconoConsultar);
 
         btnVisualizar.addActionListener(new ActionListener() {
