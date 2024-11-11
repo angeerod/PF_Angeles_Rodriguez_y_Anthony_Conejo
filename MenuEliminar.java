@@ -46,7 +46,7 @@ public class MenuEliminar extends JFrame {
         add(btnEliminarCliente);
 
         JButton btnEliminarColaborador = new JButton("Eliminar Colaborador");
-        btnEliminarColaborador.setBounds(150, 130, 200, 40); // Coordenadas para el botón de eliminar colaborador
+        btnEliminarColaborador.setBounds(140, 130, 220, 40); // Coordenadas para el botón de eliminar colaborador
 
         btnEliminarColaborador.setToolTipText("Haz clic para eliminar un colaborador"); // Tooltip
 

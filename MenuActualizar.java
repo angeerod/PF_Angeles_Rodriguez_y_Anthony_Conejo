@@ -43,7 +43,7 @@ public class MenuActualizar extends JFrame {
         add(btnActualizarCliente); // Añadir el botón al JFrame
 
         JButton btnActualizarColaborador = new JButton("Actualizar Colaborador");
-        btnActualizarColaborador.setBounds(150, 130, 200, 40); // Coordenadas para el botón de actualizar colaborador
+        btnActualizarColaborador.setBounds(140, 130, 220, 40); // Coordenadas para el botón de actualizar colaborador
 
         btnActualizarColaborador.setToolTipText("Haz clic para actualizar los datos de un colaborador"); // Tooltip
 

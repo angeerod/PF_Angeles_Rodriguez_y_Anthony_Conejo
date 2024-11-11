@@ -21,7 +21,7 @@ public class ActualizarCargo extends JFrame {
         setLayout(null);
 
          // Crear el título
-         JLabel lblTitulo = new JLabel("Actualiace los datos del cargo:", SwingConstants.CENTER);
+         JLabel lblTitulo = new JLabel("Actualice los datos del cargo:", SwingConstants.CENTER);
          lblTitulo.setFont(new Font("Georgia", Font.BOLD, 14));
          lblTitulo.setForeground(Color.BLACK); // Color del texto
          lblTitulo.setBounds(50, 5, 300, 40); // Establecer las coordenadas y tamaño del título

@@ -45,7 +45,7 @@ public class MenuIngresar extends JFrame {
         add(btnInsertarCliente); // Añadir el botón al JFrame
 
         JButton btnAgregarColaborador = new JButton("Agregar Colaborador");
-        btnAgregarColaborador.setBounds(150, 130, 200, 40); // Coordenadas para el botón de agregar colaborador
+        btnAgregarColaborador.setBounds(140, 130, 220, 40); // Coordenadas para el botón de agregar colaborador
 
         btnAgregarColaborador.setToolTipText("Haz clic para agregar un nuevo colaborador"); // Tooltip
 

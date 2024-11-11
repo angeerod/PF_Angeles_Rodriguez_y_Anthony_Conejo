@@ -23,7 +23,7 @@ public class MenuConsultar extends JFrame {
         add(lblTitulo);
 
         // Botón para visualizar clientes
-        JButton btnVisualizarCliente = new JButton("Clientes");
+        JButton btnVisualizarCliente = new JButton("Consultar Clientes");
         btnVisualizarCliente.setBounds(150, 80, 200, 40);
 
         btnVisualizarCliente.setToolTipText("Haz clic para visualizar la lista de clientes");
@@ -33,8 +33,8 @@ public class MenuConsultar extends JFrame {
         add(btnVisualizarCliente);
 
         // Botón para visualizar colaboradores
-        JButton btnVisualizarColaborador = new JButton("Colaboradores");
-        btnVisualizarColaborador.setBounds(150, 130, 200, 40);
+        JButton btnVisualizarColaborador = new JButton("Consultar Colaborador");
+        btnVisualizarColaborador.setBounds(140, 130, 220, 40);
 
         btnVisualizarColaborador.setToolTipText("Haz clic para visualizar la lista de colaboradores");
 
@@ -50,7 +50,7 @@ public class MenuConsultar extends JFrame {
         add(btnVisualizarColaborador);
 
         // Botón para visualizar cargos
-        JButton btnVisualizarCargo = new JButton("Cargos");
+        JButton btnVisualizarCargo = new JButton("Consultar Cargos");
         btnVisualizarCargo.setBounds(150, 180, 200, 40);
 
         btnVisualizarCargo.setToolTipText("Haz clic para visualizar la lista de cargos");
