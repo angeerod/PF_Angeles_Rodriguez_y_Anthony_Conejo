@@ -16,7 +16,7 @@ public class EliminarCliente extends JFrame {
 
     public EliminarCliente() {
         // Cargar la imagen de fondo
-        backgroundImage = new ImageIcon("imagenes/fondomenu2.jpg").getImage();
+        backgroundImage = new ImageIcon("imagenes/fondoacc2.png").getImage();
 
         // Configuración de la ventana
         setTitle("Eliminar Cliente");
@@ -31,7 +31,7 @@ public class EliminarCliente extends JFrame {
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 // Dibuja la imagen de fondo en el panel
-                g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+                g.drawImage(backgroundImage, -20, -70, 380, 300, this);
             }
         };
 
