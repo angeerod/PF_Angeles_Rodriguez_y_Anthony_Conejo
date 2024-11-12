@@ -36,7 +36,7 @@ public class ActualizarCliente extends JFrame {
 
         // Establecer el layout del panel de fondo
         panelFondo.setLayout(null);
-        panelFondo.setBounds(-70, -30, 550, 400); // Tamaño del panel debe ser el mismo que la ventana
+        panelFondo.setBounds(-70, -30, 550,400); // Tamaño del panel debe ser el mismo que la ventana
         add(panelFondo); // Agregar el panel al JFrame
 
         JLabel lblTitulo = new JLabel("Ingrese los datos a actualizar:", SwingConstants.CENTER);
