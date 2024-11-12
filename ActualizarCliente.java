@@ -104,7 +104,7 @@ public class ActualizarCliente extends JFrame {
         CallableStatement statement = null;
 
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/basetienda?verifyServerCertificate=false&useSSL=true", "root", "angee2701");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/basetienda?verifyServerCertificate=false&useSSL=true", "root", "TigreTony28!");
 
             String query = "{CALL ActualizarCliente(?, ?, ?, ?, ?, ?)}";
             statement = connection.prepareCall(query);
