@@ -97,6 +97,7 @@ public class ActualizarColaboradores extends JFrame {
 
         btnRegresar = new JButton("Regresar");
         btnRegresar.setBounds(50, 330, 100, 30);
+        btnRegresar.setBackground(new Color(233, 149, 149));
         btnRegresar.addActionListener(e -> regresarAlMenu());
         add(btnRegresar);
     }

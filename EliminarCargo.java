@@ -54,6 +54,7 @@ public class EliminarCargo extends JFrame {
         JButton btnRegresar = new JButton("Regresar");
         btnRegresar.setBounds(30, 100, 100, 30);
         btnRegresar.setToolTipText("Haz clic para regresar al menú de eliminación."); // Tooltip
+        btnRegresar.setBackground(new Color(233, 149, 149));
         btnRegresar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -27,6 +27,7 @@ public class ConsultarColaboradores extends JFrame {
         JPanel panelBoton = new JPanel();
         JButton btnRegresar = new JButton("Regresar");
         btnRegresar.setToolTipText("Haz clic para regresar al menú de consultas.");
+        btnRegresar.setBackground(new Color(233, 149, 149));
         panelBoton.add(btnRegresar);
         add(panelBoton, BorderLayout.SOUTH);
 
