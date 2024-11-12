@@ -110,7 +110,7 @@ public class ActualizarColaboradores extends JFrame {
         String apellido2 = txtApellido2.getText();
         String telefono = txtTelefono.getText();
 
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/basetienda", "root", "TigreTony28!")) {
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/basetienda", "root", "angee2701")) {
             String query = "{CALL ActualizarColaborador(?, ?, ?, ?, ?, ?, ?)}";
             CallableStatement statement = connection.prepareCall(query);
             statement.setString(1, idColaborador);

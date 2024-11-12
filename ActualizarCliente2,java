@@ -3,18 +3,17 @@ import java.sql.DriverManager;
 import java.sql.CallableStatement;
 import java.sql.SQLException;
 import javax.swing.*;
-
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ActualizarCliente extends JFrame {
+public class ActualizarCliente2 extends JFrame {
     
     private JTextField txtCedula, txtNombre1, txtNombre2, txtApellido1, txtApellido2, txtTelefono;
     private JButton btnRegresar;
 
-    public ActualizarCliente() {
+    public ActualizarCliente2() {
         setTitle("Actualizar Cliente");
         setSize(400, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -100,35 +99,30 @@ public class ActualizarCliente extends JFrame {
         String nuevoApellido2 = txtApellido2.getText();
         String nuevoTelefono = txtTelefono.getText();
     
-        Connection connection = null;
-        CallableStatement statement = null;
+        // Verificar que todos los campos estén completos
+        if (cedula.isEmpty() || nuevoNombre1.isEmpty() || nuevoApellido1.isEmpty() || nuevoTelefono.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor complete todos los campos obligatorios.", "Advertencia", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
 
-        try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/basetienda?verifyServerCertificate=false&useSSL=true", "root", "angee2701");
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/basetienda?verifyServerCertificate=false&useSSL=true", "root", "angee2701");
+             CallableStatement statement = connection.prepareCall("{CALL ActualizarCliente(?, ?, ?, ?, ?, ?)}")) {
 
-            String query = "{CALL ActualizarCliente(?, ?, ?, ?, ?, ?)}";
-            statement = connection.prepareCall(query);
-
+            // Setear parámetros para el procedimiento almacenado
             statement.setString(1, cedula);
             statement.setString(2, nuevoNombre1);
             statement.setString(3, nuevoNombre2);
             statement.setString(4, nuevoApellido1);
             statement.setString(5, nuevoApellido2);
             statement.setString(6, nuevoTelefono);
+
+            // Ejecutar el procedimiento almacenado
             statement.execute();
             JOptionPane.showMessageDialog(this, "Cliente actualizado exitosamente.");
-
-            limpiarCampos();
+            limpiarCampos(); // Limpiar campos después de la actualización
 
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(this, "Error al actualizar el cliente: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-        } finally {
-            try {
-                if (statement != null) statement.close();
-                if (connection != null) connection.close();
-            } catch (SQLException e) {
-                JOptionPane.showMessageDialog(this, "Error al cerrar la conexión: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-            }
         }
     }
 

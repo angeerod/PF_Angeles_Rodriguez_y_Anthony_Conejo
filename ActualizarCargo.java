@@ -11,7 +11,6 @@ public class ActualizarCargo extends JFrame {
     private JTextField txtIdCargo, txtNombre, txtSalario;
     private JButton btnRegresar;
 
-    @SuppressWarnings("unused")
     public ActualizarCargo() {
         setTitle("Actualizar Cargo");
         setSize(400, 300);
@@ -27,7 +26,7 @@ public class ActualizarCargo extends JFrame {
          lblTitulo.setBounds(50, 5, 300, 40); // Establecer las coordenadas y tamaño del título
          add(lblTitulo); // Añadir el JLabel al JFrame
 
-        JLabel lblIdCargo = new JLabel("ID Cargo:");
+        JLabel lblIdCargo = new JLabel("ID Cargo a actualizar:");
         lblIdCargo.setBounds(50, 50, 150, 25);
         add(lblIdCargo);
         txtIdCargo = new JTextField();
