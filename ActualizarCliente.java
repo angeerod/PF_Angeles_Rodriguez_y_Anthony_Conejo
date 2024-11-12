@@ -77,6 +77,7 @@ public class ActualizarCliente extends JFrame {
         add(txtTelefono);
 
         JButton btnActualizar = new JButton("Actualizar Cliente");
+        btnActualizar.setBackground(new Color(203, 236, 255)); 
         btnActualizar.setBounds(200, 290, 150, 30);
         btnActualizar.addActionListener(new ActionListener() {
             @Override

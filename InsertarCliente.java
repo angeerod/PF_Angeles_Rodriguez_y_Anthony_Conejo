@@ -86,9 +86,9 @@ public class InsertarCliente extends JFrame {
         add(txtTelefono);
 
         // Botón para insertar el cliente
-        JButton btnInsertar = new JButton("Insertar Cliente");
+        JButton btnInsertar = new JButton("Agregar Cliente");
         btnInsertar.setBounds(200, 290, 150, 30);
-        btnInsertar.setToolTipText("Haz clic para insertar el cliente.");
+        btnInsertar.setToolTipText("Haz clic para agregar el cliente.");
         btnInsertar.setBackground(new Color(203, 236, 255));
         btnInsertar.addActionListener(new ActionListener() {
             @Override

@@ -53,9 +53,9 @@ public class InsertarCargo extends JFrame {
         txtSalario.setToolTipText("Ingrese el salario del cargo.");
         add(txtSalario);
 
-        JButton btnInsertar = new JButton("Insertar Cargo");
+        JButton btnInsertar = new JButton("Agregar Cargo");
         btnInsertar.setBounds(200, 200, 150, 30);
-        btnInsertar.setToolTipText("Haz clic para insertar el cargo.");
+        btnInsertar.setToolTipText("Haz clic para Agregar el cargo.");
         btnInsertar.setBackground(new Color(203, 236, 255));
         btnInsertar.addActionListener(e -> insertarCargo());
         add(btnInsertar);

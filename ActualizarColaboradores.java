@@ -91,7 +91,8 @@ public class ActualizarColaboradores extends JFrame {
         add(txtTelefono);
 
         JButton btnInsertar = new JButton("Actualizar Colaborador");
-        btnInsertar.setBounds(200, 330, 150, 30);
+        btnInsertar.setBounds(190, 330, 170, 30);
+        btnInsertar.setBackground(new Color(203, 236, 255)); 
         btnInsertar.addActionListener(e -> insertarColaborador());
         add(btnInsertar);
 

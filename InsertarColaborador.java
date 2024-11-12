@@ -90,10 +90,10 @@ public class InsertarColaborador extends JFrame {
         txtTelefono.setToolTipText("Ingrese el número de teléfono del colaborador."); // Tooltip
         add(txtTelefono);
 
-        JButton btnInsertar = new JButton("Insertar Colaborador");
+        JButton btnInsertar = new JButton("Agregar Colaborador");
         btnInsertar.setBounds(200, 330, 170, 30);
         btnInsertar.addActionListener(e -> insertarColaborador());
-        btnInsertar.setToolTipText("Haz clic para insertar el colaborador.");
+        btnInsertar.setToolTipText("Haz clic para agregar el colaborador.");
         btnInsertar.setBackground(new Color(203, 236, 255));
         add(btnInsertar);
 

@@ -52,6 +52,7 @@ public class ActualizarCargo extends JFrame {
 
         JButton btnActualizar = new JButton("Actualizar Cargo");
         btnActualizar.setBounds(200, 200, 150, 30);
+        btnActualizar.setBackground(new Color(203, 236, 255)); 
         btnActualizar.addActionListener(e -> actualizarCargo());
         add(btnActualizar);
 
