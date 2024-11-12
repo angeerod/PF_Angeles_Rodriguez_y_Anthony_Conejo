@@ -3,95 +3,107 @@ import java.sql.DriverManager;
 import java.sql.CallableStatement;
 import java.sql.SQLException;
 import javax.swing.*;
-
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.Graphics;
+import java.awt.Image;
 
 public class ActualizarCliente extends JFrame {
     
     private JTextField txtCedula, txtNombre1, txtNombre2, txtApellido1, txtApellido2, txtTelefono;
     private JButton btnRegresar;
+    private Image backgroundImage; // Variable para la imagen de fondo
 
     public ActualizarCliente() {
+        // Cargar la imagen de fondo
+        backgroundImage = new ImageIcon("imagenes/fondomenu2.jpg").getImage();
+
         setTitle("Actualizar Cliente");
         setSize(400, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        getContentPane().setBackground(new Color(151, 204, 233 ));
         setLocationRelativeTo(null);
         setLayout(null);
+
+        // Crear un panel para manejar el fondo
+        JPanel panelFondo = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                // Dibuja la imagen de fondo en el panel
+                g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+            }
+        };
+
+        // Establecer el layout del panel de fondo
+        panelFondo.setLayout(null);
+        panelFondo.setBounds(0, 0, 400, 400); // Tamaño del panel debe ser el mismo que la ventana
+        add(panelFondo); // Agregar el panel al JFrame
 
         JLabel lblTitulo = new JLabel("Ingrese los datos a actualizar:", SwingConstants.CENTER);
         lblTitulo.setFont(new Font("Georgia", Font.BOLD, 14));
         lblTitulo.setForeground(Color.BLACK);
         lblTitulo.setBounds(50, 5, 300, 40);
-        add(lblTitulo);
+        panelFondo.add(lblTitulo);
         
         JLabel lblCedula = new JLabel("Cédula a actualizar:");
         lblCedula.setBounds(50, 50, 150, 25);
-        add(lblCedula);
+        panelFondo.add(lblCedula);
         txtCedula = new JTextField();
         txtCedula.setBounds(200, 50, 150, 25);
         txtCedula.setBackground(new Color(199, 235, 255)); 
-        add(txtCedula);
+        panelFondo.add(txtCedula);
 
         JLabel lblNombre1 = new JLabel("Primer Nombre:");
         lblNombre1.setBounds(50, 90, 150, 25);
-        add(lblNombre1);
+        panelFondo.add(lblNombre1);
         txtNombre1 = new JTextField();
         txtNombre1.setBounds(200, 90, 150, 25);
         txtNombre1.setBackground(new Color(199, 235, 255)); 
-        add(txtNombre1);
+        panelFondo.add(txtNombre1);
 
         JLabel lblNombre2 = new JLabel("Segundo Nombre:");
         lblNombre2.setBounds(50, 130, 150, 25);
-        add(lblNombre2);
+        panelFondo.add(lblNombre2);
         txtNombre2 = new JTextField();
         txtNombre2.setBounds(200, 130, 150, 25);
         txtNombre2.setBackground(new Color(199, 235, 255)); 
-        add(txtNombre2);
+        panelFondo.add(txtNombre2);
 
         JLabel lblApellido1 = new JLabel("Primer Apellido:");
         lblApellido1.setBounds(50, 170, 150, 25);
-        add(lblApellido1);
+        panelFondo.add(lblApellido1);
         txtApellido1 = new JTextField();
         txtApellido1.setBounds(200, 170, 150, 25);
         txtApellido1.setBackground(new Color(199, 235, 255)); 
-        add(txtApellido1);
+        panelFondo.add(txtApellido1);
 
         JLabel lblApellido2 = new JLabel("Segundo Apellido:");
         lblApellido2.setBounds(50, 210, 150, 25);
-        add(lblApellido2);
+        panelFondo.add(lblApellido2);
         txtApellido2 = new JTextField();
         txtApellido2.setBounds(200, 210, 150, 25);
         txtApellido2.setBackground(new Color(199, 235, 255)); 
-        add(txtApellido2);
+        panelFondo.add(txtApellido2);
 
         JLabel lblTelefono = new JLabel("Teléfono:");
         lblTelefono.setBounds(50, 250, 150, 25);
-        add(lblTelefono);
+        panelFondo.add(lblTelefono);
         txtTelefono = new JTextField();
         txtTelefono.setBounds(200, 250, 150, 25);
         txtTelefono.setBackground(new Color(199, 235, 255)); 
-        add(txtTelefono);
+        panelFondo.add(txtTelefono);
 
         JButton btnActualizar = new JButton("Actualizar Cliente");
         btnActualizar.setBackground(new Color(203, 236, 255)); 
         btnActualizar.setBounds(200, 290, 150, 30);
-        btnActualizar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                actualizarCliente();
-            }
-        });
-        add(btnActualizar);
+        btnActualizar.addActionListener(e -> actualizarCliente());
+        panelFondo.add(btnActualizar);
 
         btnRegresar = new JButton("Regresar");
         btnRegresar.setBounds(50, 290, 100, 30);
         btnRegresar.setBackground(new Color(233, 149, 149));
         btnRegresar.addActionListener(e -> regresarAlMenu());
-        add(btnRegresar);
+        panelFondo.add(btnRegresar);
     }
 
     private void actualizarCliente() {
@@ -102,14 +114,9 @@ public class ActualizarCliente extends JFrame {
         String nuevoApellido2 = txtApellido2.getText();
         String nuevoTelefono = txtTelefono.getText();
     
-        Connection connection = null;
-        CallableStatement statement = null;
-
-        try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/basetienda?verifyServerCertificate=false&useSSL=true", "root", "angee2701");
-
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/basetienda?verifyServerCertificate=false&useSSL=true", "root", "angee2701")) {
             String query = "{CALL ActualizarClientes(?, ?, ?, ?, ?, ?)}";
-            statement = connection.prepareCall(query);
+            CallableStatement statement = connection.prepareCall(query);
 
             statement.setString(1, cedula);
             statement.setString(2, nuevoNombre1);
@@ -119,18 +126,9 @@ public class ActualizarCliente extends JFrame {
             statement.setString(6, nuevoTelefono);
             statement.execute();
             JOptionPane.showMessageDialog(this, "Cliente actualizado exitosamente.");
-
             limpiarCampos();
-
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(this, "Error al actualizar el cliente: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-        } finally {
-            try {
-                if (statement != null) statement.close();
-                if (connection != null) connection.close();
-            } catch (SQLException e) {
-                JOptionPane.showMessageDialog(this, "Error al cerrar la conexión: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-            }
         }
     }
 

@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.CallableStatement;
@@ -12,33 +14,51 @@ public class EliminarColaborador extends JFrame {
 
     // Campo de texto para ingresar el ID del colaborador
     private JTextField txtIdColaborador;
+    private Image backgroundImage; // Variable para la imagen de fondo
 
     public EliminarColaborador() {
+        // Cargar la imagen de fondo
+        backgroundImage = new ImageIcon("imagenes/fondomenu2.jpg").getImage();
+
         // Configuración de la ventana
         setTitle("Eliminar Colaborador");
         setSize(370, 200);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        getContentPane().setBackground(new Color(151, 204, 233));
         setLocationRelativeTo(null);
         setLayout(null);
+
+        // Crear un panel para manejar el fondo
+        JPanel panelFondo = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                // Dibuja la imagen de fondo en el panel
+                g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+            }
+        };
+
+        // Establecer el layout del panel de fondo
+        panelFondo.setLayout(null);
+        panelFondo.setBounds(0, 0, 370, 200); // Tamaño del panel debe ser el mismo que la ventana
+        add(panelFondo); // Agregar el panel al JFrame
 
         // Título
         JLabel lblTitulo = new JLabel("Ingrese el ID del colaborador a eliminar:", SwingConstants.CENTER);
         lblTitulo.setFont(new Font("Georgia", Font.BOLD, 14));
         lblTitulo.setForeground(Color.BLACK); // Color del texto
         lblTitulo.setBounds(30, 5, 300, 40); // Establecer las coordenadas y tamaño del título
-        add(lblTitulo); // Añadir el JLabel al JFrame
+        panelFondo.add(lblTitulo); // Añadir el JLabel al panel de fondo
 
         // Etiqueta y campo de texto para el ID del colaborador
         JLabel lblIdColaborador = new JLabel("ID Colaborador:");
         lblIdColaborador.setBounds(40, 50, 100, 30);
-        add(lblIdColaborador);
+        panelFondo.add(lblIdColaborador);
 
         txtIdColaborador = new JTextField();
         txtIdColaborador.setBounds(160, 50, 160, 30);
         txtIdColaborador.setBackground(new Color(199, 235, 255)); 
         txtIdColaborador.setToolTipText("Ingrese el ID del colaborador que desea eliminar."); // Tooltip
-        add(txtIdColaborador);
+        panelFondo.add(txtIdColaborador);
 
         // Botón para eliminar el colaborador
         JButton btnEliminar = new JButton("Eliminar Colaborador");
@@ -51,7 +71,7 @@ public class EliminarColaborador extends JFrame {
                 eliminarColaborador();
             }
         });
-        add(btnEliminar);
+        panelFondo.add(btnEliminar);
 
         // Botón para regresar al menú eliminar
         JButton btnRegresar = new JButton("Regresar");
@@ -64,7 +84,7 @@ public class EliminarColaborador extends JFrame {
                 regresarAlMenuEliminar(); // Regresar al menú eliminar
             }
         });
-        add(btnRegresar);
+        panelFondo.add(btnRegresar);
     }
 
     // Método para eliminar el colaborador llamando al procedimiento almacenado

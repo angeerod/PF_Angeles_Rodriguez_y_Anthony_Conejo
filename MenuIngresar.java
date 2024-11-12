@@ -7,34 +7,47 @@ public class MenuIngresar extends JFrame {
 
     ImageIcon iconoIngresar = new ImageIcon("imagenes/new.png");
     Image imageneing = iconoIngresar.getImage();
-    Image imageneingRedimensionada = imageneing.getScaledInstance(35, 35, Image.SCALE_SMOOTH); // Cambia 20x20 por el tamaño que desees
+    Image imageneingRedimensionada = imageneing.getScaledInstance(35, 35, Image.SCALE_SMOOTH);
     ImageIcon iconoeingRedimensionado = new ImageIcon(imageneingRedimensionada);
 
+    private Image backgroundImage; // Variable para la imagen de fondo
+
     public MenuIngresar() {
+        // Cargar la imagen de fondo
+        backgroundImage = new ImageIcon("imagenes/fondomenu2.jpg").getImage();
+
         // Configuración de la ventana
         setTitle("Menú Agregar");
         setSize(500, 350);
-        getContentPane().setBackground(new Color(151, 204, 233));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-        setLayout(null); // Usamos setLayout(null) para usar coordenadas absolutas
+        setLayout(null); // Desactivamos el Layout Manager para posicionar los componentes con coordenadas
 
-        // Crear el JLabel que contendrá la imagen de fondo
-        JLabel lblFondo = new JLabel();
-        lblFondo.setBounds(0, 0, 600, 400); // Establecer el tamaño y la posición de la imagen de fondo
-        add(lblFondo); // Añadir el JLabel con la imagen de fondo al JFrame
+        // Crear un panel para manejar el fondo
+        JPanel panelFondo = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                // Dibuja la imagen de fondo en el panel
+                g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+            }
+        };
+
+        // Establecer el layout del panel de fondo
+        panelFondo.setLayout(null);
+        panelFondo.setBounds(0, 0, 500, 350); // Tamaño del panel debe ser el mismo que la ventana
+        add(panelFondo); // Agregar el panel al JFrame
 
         // Crear el título de bienvenida
         JLabel lblTitulo = new JLabel("¿Qué desea agregar?", SwingConstants.CENTER);
         lblTitulo.setFont(new Font("Georgia", Font.BOLD, 24));
         lblTitulo.setForeground(Color.BLACK); // Color del texto
         lblTitulo.setBounds(100, 20, 300, 40); // Establecer las coordenadas y tamaño del título
-        add(lblTitulo); // Añadir el JLabel al JFrame
+        panelFondo.add(lblTitulo); // Añadir el JLabel al panel
 
         // Crear los botones y establecer sus coordenadas
         JButton btnInsertarCliente = new JButton("Agregar Cliente");
         btnInsertarCliente.setBounds(150, 80, 200, 40); // Coordenadas para el botón de insertar cliente
-
         btnInsertarCliente.setToolTipText("Haz clic para agregar un nuevo cliente"); // Tooltip
         btnInsertarCliente.setBackground(new Color(203, 236, 255)); 
         btnInsertarCliente.setIcon(iconoeingRedimensionado);
@@ -45,11 +58,10 @@ public class MenuIngresar extends JFrame {
                 abrirVentanaInsertarCliente();
             }
         });
-        add(btnInsertarCliente); // Añadir el botón al JFrame
+        panelFondo.add(btnInsertarCliente); // Añadir el botón al panel
 
         JButton btnAgregarColaborador = new JButton("Agregar Colaborador");
         btnAgregarColaborador.setBounds(140, 130, 220, 40); // Coordenadas para el botón de agregar colaborador
-
         btnAgregarColaborador.setToolTipText("Haz clic para agregar un nuevo colaborador"); // Tooltip
         btnAgregarColaborador.setBackground(new Color(203, 236, 255)); 
         btnAgregarColaborador.setIcon(iconoeingRedimensionado);
@@ -60,13 +72,12 @@ public class MenuIngresar extends JFrame {
                 abrirVentanaInsertarColaborador();
             }
         });
-        add(btnAgregarColaborador); // Añadir el botón al JFrame
+        panelFondo.add(btnAgregarColaborador); // Añadir el botón al panel
 
         JButton btnAgregarCargo = new JButton("Agregar Cargo");
         btnAgregarCargo.setBounds(150, 180, 200, 40); // Coordenadas para el botón de agregar cargo
         btnAgregarCargo.setBackground(new Color(203, 236, 255)); 
         btnAgregarCargo.setToolTipText("Haz clic para agregar un nuevo cargo"); // Tooltip
-
         btnAgregarCargo.setIcon(iconoeingRedimensionado);
 
         btnAgregarCargo.addActionListener(new ActionListener() {
@@ -75,7 +86,7 @@ public class MenuIngresar extends JFrame {
                 abrirVentanaInsertarCargo();
             }
         });
-        add(btnAgregarCargo); // Añadir el botón al JFrame
+        panelFondo.add(btnAgregarCargo); // Añadir el botón al panel
 
         // Crear el botón "Regresar"
         JButton btnRegresar = new JButton("Regresar");
@@ -88,8 +99,7 @@ public class MenuIngresar extends JFrame {
                 regresarAlMenuPrincipal(); // Regresar al menú inicial
             }
         });
-        add(btnRegresar); // Añadir el botón al JFrame
-
+        panelFondo.add(btnRegresar); // Añadir el botón al panel
     }
 
     // Método para regresar al menú inicial

@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.CallableStatement;
@@ -10,32 +12,51 @@ import java.sql.SQLException;
 
 public class EliminarCliente extends JFrame {
     private JTextField txtCedula;
+    private Image backgroundImage; // Variable para la imagen de fondo
 
     public EliminarCliente() {
+        // Cargar la imagen de fondo
+        backgroundImage = new ImageIcon("imagenes/fondomenu2.jpg").getImage();
+
         // Configuración de la ventana
         setTitle("Eliminar Cliente");
         setSize(350, 200);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        getContentPane().setBackground(new Color(151, 204, 233));
         setLocationRelativeTo(null);
         setLayout(null);
 
+        // Crear un panel para manejar el fondo
+        JPanel panelFondo = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                // Dibuja la imagen de fondo en el panel
+                g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+            }
+        };
+
+        // Establecer el layout del panel de fondo
+        panelFondo.setLayout(null);
+        panelFondo.setBounds(0, 0, 350, 200); // Tamaño del panel debe ser el mismo que la ventana
+        add(panelFondo); // Agregar el panel al JFrame
+
+        // Título
         JLabel lblTitulo = new JLabel("Ingrese la cédula del cliente a eliminar:", SwingConstants.CENTER);
         lblTitulo.setFont(new Font("Georgia", Font.BOLD, 14));
         lblTitulo.setForeground(Color.BLACK); // Color del texto
         lblTitulo.setBounds(20, 5, 300, 40); // Establecer las coordenadas y tamaño del título
-        add(lblTitulo); // Añadir el JLabel al JFrame
+        panelFondo.add(lblTitulo); // Añadir el JLabel al panel de fondo
 
         // Etiqueta y campo de texto para ingresar la cédula del cliente
         JLabel lblCedula = new JLabel("Cédula:");
         lblCedula.setBounds(60, 50, 100, 30);
-        add(lblCedula);
+        panelFondo.add(lblCedula);
 
         txtCedula = new JTextField();
         txtCedula.setBounds(160, 50, 150, 30);
         txtCedula.setBackground(new Color(199, 235, 255)); 
         txtCedula.setToolTipText("Ingrese la cédula del cliente que desea eliminar."); // Tooltip
-        add(txtCedula);
+        panelFondo.add(txtCedula);
 
         // Botón para eliminar el cliente
         JButton btnEliminar = new JButton("Eliminar Cliente");
@@ -48,7 +69,7 @@ public class EliminarCliente extends JFrame {
                 eliminarCliente();
             }
         });
-        add(btnEliminar);
+        panelFondo.add(btnEliminar);
 
         // Botón para regresar al menú eliminar
         JButton btnRegresar = new JButton("Regresar");
@@ -61,7 +82,7 @@ public class EliminarCliente extends JFrame {
                 regresarAlMenuEliminar(); // Llamar al método para regresar
             }
         });
-        add(btnRegresar);
+        panelFondo.add(btnRegresar);
     }
 
     // Método para eliminar el cliente llamando al procedimiento almacenado

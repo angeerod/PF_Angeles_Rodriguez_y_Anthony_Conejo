@@ -5,62 +5,90 @@ import java.awt.Font;
 import java.sql.CallableStatement;
 import java.sql.SQLException;
 import javax.swing.*;
+import java.awt.Graphics;
+import java.awt.Image;
 
 public class ActualizarCargo extends JFrame {
 
     private JTextField txtIdCargo, txtNombre, txtSalario;
     private JButton btnRegresar;
+    private Image backgroundImage; // Variable para la imagen de fondo
 
     public ActualizarCargo() {
+        // Cargar la imagen de fondo
+        backgroundImage = new ImageIcon("imagenes/fondomenu2.jpg").getImage();
+
         setTitle("Actualizar Cargo");
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        getContentPane().setBackground(new Color(151, 204, 233 ));
         setLocationRelativeTo(null);
         setLayout(null);
 
-         // Crear el título
-         JLabel lblTitulo = new JLabel("Inserte los datos a actualizar:", SwingConstants.CENTER);
-         lblTitulo.setFont(new Font("Georgia", Font.BOLD, 14));
-         lblTitulo.setForeground(Color.BLACK); // Color del texto
-         lblTitulo.setBounds(50, 5, 300, 40); // Establecer las coordenadas y tamaño del título
-         add(lblTitulo); // Añadir el JLabel al JFrame
+        // Crear un panel para manejar el fondo
+        JPanel panelFondo = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                // Dibuja la imagen de fondo en el panel
+                g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+            }
+        };
 
+        // Establecer el layout del panel de fondo
+        panelFondo.setLayout(null);
+        panelFondo.setBounds(0, 0, 400, 300); // Tamaño del panel debe ser el mismo que la ventana
+        add(panelFondo); // Agregar el panel al JFrame
+
+        // Crear el título
+        JLabel lblTitulo = new JLabel("Inserte los datos a actualizar:", SwingConstants.CENTER);
+        lblTitulo.setFont(new Font("Georgia", Font.BOLD, 14));
+        lblTitulo.setForeground(Color.BLACK); // Color del texto
+        lblTitulo.setBounds(50, 5, 300, 40); // Establecer las coordenadas y tamaño del título
+        panelFondo.add(lblTitulo); // Añadir el JLabel al panel de fondo
+
+        // Etiqueta y campo de texto para el ID del cargo
         JLabel lblIdCargo = new JLabel("ID Cargo a actualizar:");
         lblIdCargo.setBounds(50, 50, 150, 25);
-        add(lblIdCargo);
+        panelFondo.add(lblIdCargo);
+
         txtIdCargo = new JTextField();
         txtIdCargo.setBounds(200, 50, 150, 25);
         txtIdCargo.setBackground(new Color(199, 235, 255)); 
-        add(txtIdCargo);
+        panelFondo.add(txtIdCargo);
 
+        // Etiqueta y campo de texto para el nombre
         JLabel lblNombre = new JLabel("Nombre:");
         lblNombre.setBounds(50, 100, 150, 25);
-        add(lblNombre);
+        panelFondo.add(lblNombre);
+
         txtNombre = new JTextField();
         txtNombre.setBounds(200, 100, 150, 25);
         txtNombre.setBackground(new Color(199, 235, 255)); 
-        add(txtNombre);
+        panelFondo.add(txtNombre);
 
+        // Etiqueta y campo de texto para el salario
         JLabel lblSalario = new JLabel("Salario:");
         lblSalario.setBounds(50, 150, 150, 25);
-        add(lblSalario);
+        panelFondo.add(lblSalario);
+
         txtSalario = new JTextField();
         txtSalario.setBounds(200, 150, 150, 25);
         txtSalario.setBackground(new Color(199, 235, 255)); 
-        add(txtSalario);
+        panelFondo.add(txtSalario);
 
+        // Botón para actualizar el cargo
         JButton btnActualizar = new JButton("Actualizar Cargo");
         btnActualizar.setBounds(200, 200, 150, 30);
         btnActualizar.setBackground(new Color(203, 236, 255)); 
         btnActualizar.addActionListener(e -> actualizarCargo());
-        add(btnActualizar);
+        panelFondo.add(btnActualizar);
 
+        // Botón para regresar al menú
         btnRegresar = new JButton("Regresar");
         btnRegresar.setBounds(50, 200, 100, 30);
         btnRegresar.setBackground(new Color(233, 149, 149));
         btnRegresar.addActionListener(e -> regresarAlMenu());
-        add(btnRegresar);
+        panelFondo.add(btnRegresar);
     }
 
     private void actualizarCargo() {
