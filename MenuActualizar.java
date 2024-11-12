@@ -14,7 +14,7 @@ public class MenuActualizar extends JFrame {
 
     public MenuActualizar() {
         // Cargar la imagen de fondo
-        backgroundImage = new ImageIcon("imagenes/fondomenu2.jpg").getImage();
+        backgroundImage = new ImageIcon("imagenes/fondomenu6.jpg").getImage();
 
         // Configuración de la ventana
         setTitle("Menú Actualizar");
@@ -35,22 +35,22 @@ public class MenuActualizar extends JFrame {
 
         // Establecer el layout del panel de fondo
         panelFondo.setLayout(null);
-        panelFondo.setBounds(0, 0, 500, 350); // Tamaño del panel debe ser el mismo que la ventana
+        panelFondo.setBounds(0, -38, 500, 350); // Tamaño del panel debe ser el mismo que la ventana
         add(panelFondo); // Agregar el panel al JFrame
 
         // Crear el título de bienvenida
         JLabel lblTitulo = new JLabel("¿Qué desea actualizar?", SwingConstants.CENTER);
         lblTitulo.setFont(new Font("Georgia", Font.BOLD, 24));
         lblTitulo.setForeground(Color.BLACK); // Color del texto
-        lblTitulo.setBounds(100, 20, 300, 40); // Establecer las coordenadas y tamaño del título
+        lblTitulo.setBounds(100, 60, 300, 40); // Establecer las coordenadas y tamaño del título
         panelFondo.add(lblTitulo); // Añadir el JLabel al panel de fondo
 
         // Crear los botones y establecer sus coordenadas para actualizar
         JButton btnActualizarCliente = new JButton("Actualizar Cliente");
-        btnActualizarCliente.setBounds(150, 80, 200, 40); // Coordenadas para el botón de actualizar cliente
+        btnActualizarCliente.setBounds(150, 120, 200, 40); // Coordenadas para el botón de actualizar cliente
         btnActualizarCliente.setToolTipText("Haz clic para actualizar los datos de un cliente"); // Tooltip
         btnActualizarCliente.setIcon(iconoactRedimensionado);
-        btnActualizarCliente.setBackground(new Color(203, 236, 255));
+        btnActualizarCliente.setBackground(new Color(134, 172, 212));
         btnActualizarCliente.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -61,8 +61,8 @@ public class MenuActualizar extends JFrame {
         panelFondo.add(btnActualizarCliente); // Añadir el botón al panel de fondo
 
         JButton btnActualizarColaborador = new JButton("Actualizar Colaborador");
-        btnActualizarColaborador.setBounds(140, 130, 220, 40); // Coordenadas para el botón de actualizar colaborador
-        btnActualizarColaborador.setBackground(new Color(203, 236, 255));
+        btnActualizarColaborador.setBounds(140, 170, 220, 40); // Coordenadas para el botón de actualizar colaborador
+        btnActualizarColaborador.setBackground(new Color(134, 172, 212));
         btnActualizarColaborador.setToolTipText("Haz clic para actualizar los datos de un colaborador"); // Tooltip
         btnActualizarColaborador.setIcon(iconoactRedimensionado);
         btnActualizarColaborador.addActionListener(new ActionListener() {
@@ -75,9 +75,9 @@ public class MenuActualizar extends JFrame {
         panelFondo.add(btnActualizarColaborador); // Añadir el botón al panel de fondo
 
         JButton btnActualizarCargo = new JButton("Actualizar Cargo");
-        btnActualizarCargo.setBounds(150, 180, 200, 40); // Coordenadas para el botón de actualizar cargo
+        btnActualizarCargo.setBounds(150, 220, 200, 40); // Coordenadas para el botón de actualizar cargo
         btnActualizarCargo.setToolTipText("Haz clic para actualizar los datos de un cargo"); // Tooltip
-        btnActualizarCargo.setBackground(new Color(203, 236, 255));
+        btnActualizarCargo.setBackground(new Color(134, 172, 212));
         btnActualizarCargo.setIcon(iconoactRedimensionado);
         btnActualizarCargo.addActionListener(new ActionListener() {
             @Override
@@ -90,7 +90,7 @@ public class MenuActualizar extends JFrame {
 
         // Crear el botón "Regresar"
         JButton btnRegresar = new JButton("Regresar");
-        btnRegresar.setBounds(30, 250, 100, 30); // Establecer las coordenadas para el botón "Regresar"
+        btnRegresar.setBounds(350, 290, 100, 30); // Establecer las coordenadas para el botón "Regresar"
         btnRegresar.setToolTipText("Haz clic para regresar al menú principal"); // Tooltip
         btnRegresar.setBackground(new Color(233, 149, 149));
         btnRegresar.addActionListener(new ActionListener() {

@@ -14,7 +14,7 @@ public class MenuIngresar extends JFrame {
 
     public MenuIngresar() {
         // Cargar la imagen de fondo
-        backgroundImage = new ImageIcon("imagenes/fondomenu2.jpg").getImage();
+        backgroundImage = new ImageIcon("imagenes/fondomenu6.jpg").getImage();
 
         // Configuración de la ventana
         setTitle("Menú Agregar");
@@ -35,21 +35,21 @@ public class MenuIngresar extends JFrame {
 
         // Establecer el layout del panel de fondo
         panelFondo.setLayout(null);
-        panelFondo.setBounds(0, 0, 500, 350); // Tamaño del panel debe ser el mismo que la ventana
+        panelFondo.setBounds(0, -38, 500, 350); // Tamaño del panel debe ser el mismo que la ventana
         add(panelFondo); // Agregar el panel al JFrame
 
         // Crear el título de bienvenida
         JLabel lblTitulo = new JLabel("¿Qué desea agregar?", SwingConstants.CENTER);
         lblTitulo.setFont(new Font("Georgia", Font.BOLD, 24));
         lblTitulo.setForeground(Color.BLACK); // Color del texto
-        lblTitulo.setBounds(100, 20, 300, 40); // Establecer las coordenadas y tamaño del título
+        lblTitulo.setBounds(100, 60, 300, 40); // Establecer las coordenadas y tamaño del título
         panelFondo.add(lblTitulo); // Añadir el JLabel al panel
 
         // Crear los botones y establecer sus coordenadas
         JButton btnInsertarCliente = new JButton("Agregar Cliente");
-        btnInsertarCliente.setBounds(150, 80, 200, 40); // Coordenadas para el botón de insertar cliente
+        btnInsertarCliente.setBounds(150, 120, 200, 40); // Coordenadas para el botón de insertar cliente
         btnInsertarCliente.setToolTipText("Haz clic para agregar un nuevo cliente"); // Tooltip
-        btnInsertarCliente.setBackground(new Color(203, 236, 255)); 
+        btnInsertarCliente.setBackground(new Color(134, 172, 212)); 
         btnInsertarCliente.setIcon(iconoeingRedimensionado);
 
         btnInsertarCliente.addActionListener(new ActionListener() {
@@ -61,9 +61,9 @@ public class MenuIngresar extends JFrame {
         panelFondo.add(btnInsertarCliente); // Añadir el botón al panel
 
         JButton btnAgregarColaborador = new JButton("Agregar Colaborador");
-        btnAgregarColaborador.setBounds(140, 130, 220, 40); // Coordenadas para el botón de agregar colaborador
+        btnAgregarColaborador.setBounds(140, 170, 220, 40); // Coordenadas para el botón de agregar colaborador
         btnAgregarColaborador.setToolTipText("Haz clic para agregar un nuevo colaborador"); // Tooltip
-        btnAgregarColaborador.setBackground(new Color(203, 236, 255)); 
+        btnAgregarColaborador.setBackground(new Color(134, 172, 212)); 
         btnAgregarColaborador.setIcon(iconoeingRedimensionado);
 
         btnAgregarColaborador.addActionListener(new ActionListener() {
@@ -75,8 +75,8 @@ public class MenuIngresar extends JFrame {
         panelFondo.add(btnAgregarColaborador); // Añadir el botón al panel
 
         JButton btnAgregarCargo = new JButton("Agregar Cargo");
-        btnAgregarCargo.setBounds(150, 180, 200, 40); // Coordenadas para el botón de agregar cargo
-        btnAgregarCargo.setBackground(new Color(203, 236, 255)); 
+        btnAgregarCargo.setBounds(150, 220, 200, 40); // Coordenadas para el botón de agregar cargo
+        btnAgregarCargo.setBackground(new Color(134, 172, 212)); 
         btnAgregarCargo.setToolTipText("Haz clic para agregar un nuevo cargo"); // Tooltip
         btnAgregarCargo.setIcon(iconoeingRedimensionado);
 
@@ -90,7 +90,7 @@ public class MenuIngresar extends JFrame {
 
         // Crear el botón "Regresar"
         JButton btnRegresar = new JButton("Regresar");
-        btnRegresar.setBounds(30, 250, 100, 30); // Establecer las coordenadas para el botón "Regresar"
+        btnRegresar.setBounds(350, 290, 100, 30); // Establecer las coordenadas para el botón "Regresar"
         btnRegresar.setToolTipText("Haz clic para regresar al menú principal"); // Tooltip
         btnRegresar.setBackground(new Color(233, 149, 149)); 
         btnRegresar.addActionListener(new ActionListener() {

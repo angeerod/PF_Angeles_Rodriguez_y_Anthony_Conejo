@@ -27,11 +27,11 @@ public class MenuPrincipal extends JFrame {
 
     public MenuPrincipal() {
         // Cargar la imagen de fondo
-        backgroundImage = new ImageIcon("imagenes/fondomenu2.jpg").getImage();
+        backgroundImage = new ImageIcon("imagenes/fondomenu6.jpg").getImage();
 
         // Configuración de la ventana
         setTitle("Inicio");
-        setSize(600, 400);
+        setSize(600, 435);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(null); // Desactivamos el Layout Manager para posicionar los componentes con coordenadas
@@ -68,7 +68,7 @@ public class MenuPrincipal extends JFrame {
         JButton btnIngresar = new JButton("Agregar");
         btnIngresar.setFont(new Font("Arial", Font.BOLD, 12));
         btnIngresar.setBounds(240, 120, 140, 40);
-        btnIngresar.setBackground(new Color(203, 236, 255));
+        btnIngresar.setBackground(new Color(134, 172, 212));
         btnIngresar.setIcon(iconoeingRedimensionado);
         btnIngresar.setFocusable(false);  // Importante para que no interfiera en el foco
         panelFondo.add(btnIngresar);
@@ -83,7 +83,7 @@ public class MenuPrincipal extends JFrame {
         // Crear el botón "Eliminar"
         JButton btnEliminar = new JButton("Eliminar");
         btnEliminar.setFont(new Font("Arial", Font.BOLD, 12));
-        btnEliminar.setBackground(new Color(203, 236, 255));
+        btnEliminar.setBackground(new Color(134, 172, 212));
         btnEliminar.setBounds(240, 170, 140, 40);
         btnEliminar.setIcon(iconoelimRedimensionado);
         btnEliminar.setFocusable(false);  // Evita interferencia del foco
@@ -102,7 +102,7 @@ public class MenuPrincipal extends JFrame {
         btnActualizar.setToolTipText("Haz clic para actualizar un elemento");
         btnActualizar.setBounds(235, 220, 150, 40);
         btnActualizar.setIcon(iconoactRedimensionado);
-        btnActualizar.setBackground(new Color(203, 236, 255));
+        btnActualizar.setBackground(new Color(134, 172, 212));
         btnActualizar.setFocusable(false); // Evita interferencia de foco
         panelFondo.add(btnActualizar);
 
@@ -119,7 +119,7 @@ public class MenuPrincipal extends JFrame {
         btnVisualizar.setToolTipText("Haz clic para visualizar los elementos");
         btnVisualizar.setBounds(235, 270, 150, 40);
         btnVisualizar.setIcon(iconoRedimensionado);
-        btnVisualizar.setBackground(new Color(203, 236, 255));
+        btnVisualizar.setBackground(new Color(134, 172, 212));
         btnVisualizar.setFocusable(false); // Evita interferencia de foco
         panelFondo.add(btnVisualizar);
 

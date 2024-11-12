@@ -14,7 +14,7 @@ public class MenuConsultar extends JFrame {
 
     public MenuConsultar() {
         // Cargar la imagen de fondo
-        backgroundImage = new ImageIcon("imagenes/fondomenu2.jpg").getImage();
+        backgroundImage = new ImageIcon("imagenes/fondomenu6.jpg").getImage();
 
         // Configuración de la ventana
         setTitle("Menú Consultar");
@@ -35,19 +35,19 @@ public class MenuConsultar extends JFrame {
 
         // Establecer el layout del panel de fondo
         panelFondo.setLayout(null);
-        panelFondo.setBounds(0, 0, 500, 350); // Tamaño del panel debe ser el mismo que la ventana
+        panelFondo.setBounds(0, -38,500, 350); // Tamaño del panel debe ser el mismo que la ventana
         add(panelFondo); // Agregar el panel al JFrame
 
         // Crear el título de bienvenida
         JLabel lblTitulo = new JLabel("¿Qué desea consultar?", SwingConstants.CENTER);
         lblTitulo.setFont(new Font("Georgia", Font.BOLD, 24));
-        lblTitulo.setBounds(100, 20, 300, 40);
+        lblTitulo.setBounds(100, 60, 300, 40);
         panelFondo.add(lblTitulo); // Añadir el JLabel al panel
 
         // Botón para visualizar clientes
         JButton btnVisualizarCliente = new JButton("Consultar Clientes");
-        btnVisualizarCliente.setBounds(150, 80, 200, 40);
-        btnVisualizarCliente.setBackground(new Color(203, 236, 255));
+        btnVisualizarCliente.setBounds(150, 120, 200, 40);
+        btnVisualizarCliente.setBackground(new Color(134, 172, 212));
         btnVisualizarCliente.setToolTipText("Haz clic para visualizar la lista de clientes");
         btnVisualizarCliente.setIcon(iconoRedimensionado);
         panelFondo.add(btnVisualizarCliente);
@@ -61,9 +61,9 @@ public class MenuConsultar extends JFrame {
         panelFondo.add(btnVisualizarCliente);
 
         // Botón para visualizar colaboradores
-        JButton btnVisualizarColaborador = new JButton("Consultar Colaborador");
-        btnVisualizarColaborador.setBounds(140, 130, 220, 40);
-        btnVisualizarColaborador.setBackground(new Color(203, 236, 255));
+        JButton btnVisualizarColaborador = new JButton("Consultar Colaboradores");
+        btnVisualizarColaborador.setBounds(140, 170, 220, 40);
+        btnVisualizarColaborador.setBackground(new Color(134, 172, 212));
         btnVisualizarColaborador.setToolTipText("Haz clic para visualizar la lista de colaboradores");
         btnVisualizarColaborador.setIcon(iconoRedimensionado);
 
@@ -78,8 +78,8 @@ public class MenuConsultar extends JFrame {
 
         // Botón para visualizar cargos
         JButton btnVisualizarCargo = new JButton("Consultar Cargos");
-        btnVisualizarCargo.setBounds(150, 180, 200, 40);
-        btnVisualizarCargo.setBackground(new Color(203, 236, 255));
+        btnVisualizarCargo.setBounds(150, 220, 200, 40);
+        btnVisualizarCargo.setBackground(new Color(134, 172, 212));
         btnVisualizarCargo.setToolTipText("Haz clic para visualizar la lista de cargos");
         btnVisualizarCargo.setIcon(iconoRedimensionado);
 
@@ -94,7 +94,7 @@ public class MenuConsultar extends JFrame {
 
         // Botón para regresar
         JButton btnRegresar = new JButton("Regresar");
-        btnRegresar.setBounds(30, 250, 100, 30);
+        btnRegresar.setBounds(350, 290, 100, 30);
         btnRegresar.setToolTipText("Haz clic para regresar al menú principal");
         btnRegresar.setBackground(new Color(233, 149, 149));
         btnRegresar.addActionListener(new ActionListener() {

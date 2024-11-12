@@ -1,8 +1,5 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Image;
 import java.sql.CallableStatement;
 import java.sql.SQLException;
 import javax.swing.*;
@@ -116,7 +113,7 @@ public class InsertarColaborador extends JFrame {
         btnInsertar.setBounds(200, 330, 170, 30);
         btnInsertar.addActionListener(e -> insertarColaborador());
         btnInsertar.setToolTipText("Haz clic para agregar el colaborador.");
-        btnInsertar.setBackground(new Color(203, 236, 255));
+        btnInsertar.setBackground(new Color(134, 172, 212));
         panelFondo.add(btnInsertar);
 
         btnRegresar = new JButton("Regresar");

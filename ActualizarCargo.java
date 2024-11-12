@@ -16,7 +16,7 @@ public class ActualizarCargo extends JFrame {
 
     public ActualizarCargo() {
         // Cargar la imagen de fondo
-        backgroundImage = new ImageIcon("imagenes/fondomenu2.jpg").getImage();
+        backgroundImage = new ImageIcon("imagenes/fondoacc2.png").getImage();
 
         setTitle("Actualizar Cargo");
         setSize(400, 300);
@@ -34,58 +34,58 @@ public class ActualizarCargo extends JFrame {
             }
         };
 
-        // Establecer el layout del panel de fondo
+        // Establecer el layout del panel de fondo 120
         panelFondo.setLayout(null);
-        panelFondo.setBounds(0, 0, 400, 300); // Tamaño del panel debe ser el mismo que la ventana
+        panelFondo.setBounds(-20, -25, 450, 300); // Tamaño del panel debe ser el mismo que la ventana
         add(panelFondo); // Agregar el panel al JFrame
 
         // Crear el título
         JLabel lblTitulo = new JLabel("Inserte los datos a actualizar:", SwingConstants.CENTER);
-        lblTitulo.setFont(new Font("Georgia", Font.BOLD, 14));
         lblTitulo.setForeground(Color.BLACK); // Color del texto
-        lblTitulo.setBounds(50, 5, 300, 40); // Establecer las coordenadas y tamaño del título
+        lblTitulo.setBounds(70, 30, 300, 40); // Establecer las coordenadas y tamaño del título
         panelFondo.add(lblTitulo); // Añadir el JLabel al panel de fondo
 
         // Etiqueta y campo de texto para el ID del cargo
         JLabel lblIdCargo = new JLabel("ID Cargo a actualizar:");
-        lblIdCargo.setBounds(50, 50, 150, 25);
+        lblIdCargo.setFont(new Font("Georgia", Font.BOLD, 10 ));
+        lblIdCargo.setBounds(70, 80, 150, 25);
         panelFondo.add(lblIdCargo);
 
         txtIdCargo = new JTextField();
-        txtIdCargo.setBounds(200, 50, 150, 25);
+        txtIdCargo.setBounds(220, 80, 150, 25);
         txtIdCargo.setBackground(new Color(199, 235, 255)); 
         panelFondo.add(txtIdCargo);
 
         // Etiqueta y campo de texto para el nombre
         JLabel lblNombre = new JLabel("Nombre:");
-        lblNombre.setBounds(50, 100, 150, 25);
+        lblNombre.setBounds(70, 130, 150, 25);
         panelFondo.add(lblNombre);
 
         txtNombre = new JTextField();
-        txtNombre.setBounds(200, 100, 150, 25);
+        txtNombre.setBounds(220, 130, 150, 25);
         txtNombre.setBackground(new Color(199, 235, 255)); 
         panelFondo.add(txtNombre);
 
         // Etiqueta y campo de texto para el salario
         JLabel lblSalario = new JLabel("Salario:");
-        lblSalario.setBounds(50, 150, 150, 25);
+        lblSalario.setBounds(70, 180, 150, 25);
         panelFondo.add(lblSalario);
 
         txtSalario = new JTextField();
-        txtSalario.setBounds(200, 150, 150, 25);
+        txtSalario.setBounds(220, 180, 150, 25);
         txtSalario.setBackground(new Color(199, 235, 255)); 
         panelFondo.add(txtSalario);
 
         // Botón para actualizar el cargo
         JButton btnActualizar = new JButton("Actualizar Cargo");
-        btnActualizar.setBounds(200, 200, 150, 30);
-        btnActualizar.setBackground(new Color(203, 236, 255)); 
+        btnActualizar.setBounds(220, 230, 150, 30);
+        btnActualizar.setBackground(new Color(134, 172, 212)); 
         btnActualizar.addActionListener(e -> actualizarCargo());
         panelFondo.add(btnActualizar);
 
         // Botón para regresar al menú
         btnRegresar = new JButton("Regresar");
-        btnRegresar.setBounds(50, 200, 100, 30);
+        btnRegresar.setBounds(70, 230, 100, 30);
         btnRegresar.setBackground(new Color(233, 149, 149));
         btnRegresar.addActionListener(e -> regresarAlMenu());
         panelFondo.add(btnRegresar);
