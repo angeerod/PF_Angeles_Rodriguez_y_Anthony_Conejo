@@ -94,6 +94,7 @@ public class InsertarColaborador extends JFrame {
         btnInsertar.setBounds(200, 330, 170, 30);
         btnInsertar.addActionListener(e -> insertarColaborador());
         btnInsertar.setToolTipText("Haz clic para insertar el colaborador.");
+        btnInsertar.setBackground(new Color(203, 236, 255));
         add(btnInsertar);
 
         btnRegresar = new JButton("Regresar");

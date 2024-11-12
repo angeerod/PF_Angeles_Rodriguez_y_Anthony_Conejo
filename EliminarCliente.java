@@ -41,6 +41,7 @@ public class EliminarCliente extends JFrame {
         JButton btnEliminar = new JButton("Eliminar Cliente");
         btnEliminar.setBounds(160, 100, 150, 30);
         btnEliminar.setToolTipText("Haz clic para eliminar al cliente con la cédula ingresada."); // Tooltip
+        btnEliminar.setBackground(new Color(203, 236, 255));
         btnEliminar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

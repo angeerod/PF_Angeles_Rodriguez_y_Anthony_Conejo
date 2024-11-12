@@ -56,6 +56,7 @@ public class InsertarCargo extends JFrame {
         JButton btnInsertar = new JButton("Insertar Cargo");
         btnInsertar.setBounds(200, 200, 150, 30);
         btnInsertar.setToolTipText("Haz clic para insertar el cargo.");
+        btnInsertar.setBackground(new Color(203, 236, 255));
         btnInsertar.addActionListener(e -> insertarCargo());
         add(btnInsertar);
 

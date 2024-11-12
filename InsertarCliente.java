@@ -89,6 +89,7 @@ public class InsertarCliente extends JFrame {
         JButton btnInsertar = new JButton("Insertar Cliente");
         btnInsertar.setBounds(200, 290, 150, 30);
         btnInsertar.setToolTipText("Haz clic para insertar el cliente.");
+        btnInsertar.setBackground(new Color(203, 236, 255));
         btnInsertar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
