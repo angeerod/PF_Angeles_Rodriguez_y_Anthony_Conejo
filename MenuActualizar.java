@@ -36,7 +36,7 @@ public class MenuActualizar extends JFrame {
         btnActualizarCliente.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                abrirVentanaActualizarCliente();
+                abrirVentanaActualizarCliente2();
             }
         });
 
@@ -100,7 +100,7 @@ private void abrirVentanaActualizarColaborador() {
     this.setVisible(false); // Ocultar la ventana de menú
 }
 
-private void abrirVentanaActualizarCliente() {
+private void abrirVentanaActualizarCliente2() {
     ActualizarCliente ventanaCliente = new ActualizarCliente();
     ventanaCliente.setVisible(true);
     this.setVisible(false); // Ocultar la ventana de menú
