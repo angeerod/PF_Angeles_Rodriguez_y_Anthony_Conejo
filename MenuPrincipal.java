@@ -38,7 +38,7 @@ public class MenuPrincipal extends JFrame {
 
         btnIngresar.setBounds(240, 120, 100, 30); // Establecer las coordenadas y tamaño del botón
         btnIngresar.setToolTipText("Haz clic para agregar un nuevo elemento"); // Tooltip
-
+        btnIngresar.setBackground(new Color(203, 236, 255)); 
         btnIngresar.setBounds(240, 120, 140, 40); // Establecer las coordenadas y tamaño del botón
         btnIngresar.setIcon(iconoIngresar);
 
@@ -52,10 +52,9 @@ public class MenuPrincipal extends JFrame {
         // Crear el botón "Eliminar"
         JButton btnEliminar = new JButton("Eliminar");
         btnEliminar.setFont(new Font("Arial", Font.BOLD, 12));
-
+        btnEliminar.setBackground(new Color(203, 236, 255)); 
         btnEliminar.setBounds(240, 170, 100, 30); // Establecer las coordenadas y tamaño del botón
         btnEliminar.setToolTipText("Haz clic para eliminar un elemento"); // Tooltip
-
         btnEliminar.setBounds(240, 170, 140, 40); // Establecer las coordenadas y tamaño del botón
         btnEliminar.setIcon(iconoEliminar);
 
@@ -72,7 +71,7 @@ public class MenuPrincipal extends JFrame {
         btnActualizar.setToolTipText("Haz clic para actualizar un elemento"); // Tooltip
         btnActualizar.setBounds(235, 220, 150, 40); // Establecer las coordenadas y tamaño del botón
         btnActualizar.setIcon(iconoActualizar);
-
+        btnActualizar.setBackground(new Color(203, 236, 255)); 
         btnActualizar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -86,7 +85,7 @@ public class MenuPrincipal extends JFrame {
         btnVisualizar.setToolTipText("Haz clic para visualizar los elementos"); // Tooltip
         btnVisualizar.setBounds(235, 270, 150, 40); // Establecer las coordenadas y tamaño del botón
         btnVisualizar.setIcon(iconoConsultar);
-
+        btnVisualizar.setBackground(new Color(203, 236, 255)); 
         btnVisualizar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

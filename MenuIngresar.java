@@ -33,7 +33,7 @@ public class MenuIngresar extends JFrame {
         btnInsertarCliente.setBounds(150, 80, 200, 40); // Coordenadas para el botón de insertar cliente
 
         btnInsertarCliente.setToolTipText("Haz clic para agregar un nuevo cliente"); // Tooltip
-
+        btnInsertarCliente.setBackground(new Color(203, 236, 255)); 
         btnInsertarCliente.setIcon(iconoIngresar);
 
         btnInsertarCliente.addActionListener(new ActionListener() {
@@ -48,7 +48,7 @@ public class MenuIngresar extends JFrame {
         btnAgregarColaborador.setBounds(140, 130, 220, 40); // Coordenadas para el botón de agregar colaborador
 
         btnAgregarColaborador.setToolTipText("Haz clic para agregar un nuevo colaborador"); // Tooltip
-
+        btnAgregarColaborador.setBackground(new Color(203, 236, 255)); 
         btnAgregarColaborador.setIcon(iconoIngresar);
 
         btnAgregarColaborador.addActionListener(new ActionListener() {
@@ -61,7 +61,7 @@ public class MenuIngresar extends JFrame {
 
         JButton btnAgregarCargo = new JButton("Agregar Cargo");
         btnAgregarCargo.setBounds(150, 180, 200, 40); // Coordenadas para el botón de agregar cargo
-
+        btnAgregarCargo.setBackground(new Color(203, 236, 255)); 
         btnAgregarCargo.setToolTipText("Haz clic para agregar un nuevo cargo"); // Tooltip
 
         btnAgregarCargo.setIcon(iconoIngresar);
@@ -78,6 +78,7 @@ public class MenuIngresar extends JFrame {
         JButton btnRegresar = new JButton("Regresar");
         btnRegresar.setBounds(30, 250, 100, 30); // Establecer las coordenadas para el botón "Regresar"
         btnRegresar.setToolTipText("Haz clic para regresar al menú principal"); // Tooltip
+        btnRegresar.setBackground(new Color(233, 149, 149)); 
         btnRegresar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

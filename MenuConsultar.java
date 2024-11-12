@@ -25,7 +25,7 @@ public class MenuConsultar extends JFrame {
         // Botón para visualizar clientes
         JButton btnVisualizarCliente = new JButton("Consultar Clientes");
         btnVisualizarCliente.setBounds(150, 80, 200, 40);
-
+        btnVisualizarCliente.setBackground(new Color(203, 236, 255));
         btnVisualizarCliente.setToolTipText("Haz clic para visualizar la lista de clientes");
 
         btnVisualizarCliente.setIcon(iconoConsultar);
@@ -35,7 +35,7 @@ public class MenuConsultar extends JFrame {
         // Botón para visualizar colaboradores
         JButton btnVisualizarColaborador = new JButton("Consultar Colaborador");
         btnVisualizarColaborador.setBounds(140, 130, 220, 40);
-
+        btnVisualizarColaborador.setBackground(new Color(203, 236, 255));
         btnVisualizarColaborador.setToolTipText("Haz clic para visualizar la lista de colaboradores");
 
         btnVisualizarColaborador.setIcon(iconoConsultar);
@@ -52,7 +52,7 @@ public class MenuConsultar extends JFrame {
         // Botón para visualizar cargos
         JButton btnVisualizarCargo = new JButton("Consultar Cargos");
         btnVisualizarCargo.setBounds(150, 180, 200, 40);
-
+        btnVisualizarCargo.setBackground(new Color(203, 236, 255));
         btnVisualizarCargo.setToolTipText("Haz clic para visualizar la lista de cargos");
         btnVisualizarCargo.addActionListener(new ActionListener() {
             @Override
@@ -70,6 +70,7 @@ public class MenuConsultar extends JFrame {
         JButton btnRegresar = new JButton("Regresar");
         btnRegresar.setBounds(30, 250, 100, 30);
         btnRegresar.setToolTipText("Haz clic para regresar al menú principal");
+        btnRegresar.setBackground(new Color(233, 149, 149));
         btnRegresar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -83,6 +83,7 @@ public class Login extends JFrame {
         // Botón de autenticación
         JButton btnLogin = new JButton("Iniciar sesión");
         btnLogin.setBounds(130, 250, 150, 30);
+        btnLogin.setBackground(new Color(203, 236, 255)); 
         btnLogin.setToolTipText("Haz clic para iniciar sesión");  // Tooltip
         panelCentro.add(btnLogin);
 

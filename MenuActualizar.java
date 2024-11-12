@@ -33,6 +33,7 @@ public class MenuActualizar extends JFrame {
         btnActualizarCliente.setBounds(150, 80, 200, 40); // Coordenadas para el botón de actualizar cliente
         btnActualizarCliente.setToolTipText("Haz clic para actualizar los datos de un cliente"); // Tooltip
         btnActualizarCliente.setIcon(iconoActualizar);
+        btnActualizarCliente.setBackground(new Color(203, 236, 255));
         btnActualizarCliente.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -44,7 +45,7 @@ public class MenuActualizar extends JFrame {
 
         JButton btnActualizarColaborador = new JButton("Actualizar Colaborador");
         btnActualizarColaborador.setBounds(140, 130, 220, 40); // Coordenadas para el botón de actualizar colaborador
-
+        btnActualizarColaborador.setBackground(new Color(203, 236, 255));
         btnActualizarColaborador.setToolTipText("Haz clic para actualizar los datos de un colaborador"); // Tooltip
 
         btnActualizarColaborador.setIcon(iconoActualizar);
@@ -60,7 +61,7 @@ public class MenuActualizar extends JFrame {
         JButton btnActualizarCargo = new JButton("Actualizar Cargo");
         btnActualizarCargo.setBounds(150, 180, 200, 40); // Coordenadas para el botón de actualizar cargo
         btnActualizarCargo.setToolTipText("Haz clic para actualizar los datos de un cargo"); // Tooltip
-
+        btnActualizarCargo.setBackground(new Color(203, 236, 255));
         btnActualizarCargo.setIcon(iconoActualizar);
         btnActualizarCargo.addActionListener(new ActionListener() {
             @Override
@@ -75,6 +76,7 @@ public class MenuActualizar extends JFrame {
         JButton btnRegresar = new JButton("Regresar");
         btnRegresar.setBounds(30, 250, 100, 30); // Establecer las coordenadas para el botón "Regresar"
         btnRegresar.setToolTipText("Haz clic para regresar al menú principal"); // Tooltip
+        btnRegresar.setBackground(new Color(233, 149, 149));
         btnRegresar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

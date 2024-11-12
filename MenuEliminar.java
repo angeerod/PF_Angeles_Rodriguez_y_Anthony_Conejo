@@ -31,7 +31,7 @@ public class MenuEliminar extends JFrame {
         // Crear los botones y establecer sus coordenadas para eliminar
         JButton btnEliminarCliente = new JButton("Eliminar Cliente");
         btnEliminarCliente.setBounds(150, 80, 200, 40); // Coordenadas para el botón de eliminar cliente
-
+        btnEliminarCliente.setBackground(new Color(203, 236, 255)); 
         btnEliminarCliente.setToolTipText("Haz clic para eliminar un cliente"); // Tooltip
 
         btnEliminarCliente.setIcon(iconoEliminar);
@@ -47,7 +47,7 @@ public class MenuEliminar extends JFrame {
 
         JButton btnEliminarColaborador = new JButton("Eliminar Colaborador");
         btnEliminarColaborador.setBounds(140, 130, 220, 40); // Coordenadas para el botón de eliminar colaborador
-
+        btnEliminarColaborador.setBackground(new Color(203, 236, 255)); 
         btnEliminarColaborador.setToolTipText("Haz clic para eliminar un colaborador"); // Tooltip
 
         btnEliminarColaborador.setIcon(iconoEliminar);
@@ -63,7 +63,7 @@ public class MenuEliminar extends JFrame {
 
         JButton btnEliminarCargo = new JButton("Eliminar Cargo");
         btnEliminarCargo.setBounds(150, 180, 200, 40); // Coordenadas para el botón de eliminar cargo
-
+        btnEliminarCargo.setBackground(new Color(203, 236, 255)); 
         btnEliminarCargo.setToolTipText("Haz clic para eliminar un cargo"); // Tooltip
 
         btnEliminarCargo.setIcon(iconoEliminar);
@@ -81,6 +81,7 @@ public class MenuEliminar extends JFrame {
         JButton btnRegresar = new JButton("Regresar");
         btnRegresar.setBounds(30, 250, 100, 30); // Establecer las coordenadas para el botón "Regresar"
         btnRegresar.setToolTipText("Haz clic para regresar al menú principal"); // Tooltip
+        btnRegresar.setBackground(new Color(233, 149, 149)); 
         btnRegresar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
