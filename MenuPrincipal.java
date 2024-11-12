@@ -6,9 +6,22 @@ import java.awt.event.ActionListener;
 public class MenuPrincipal extends JFrame {
 
     ImageIcon iconoIngresar = new ImageIcon("imagenes/new.png");
+    Image imageneing = iconoIngresar.getImage();
+    Image imageneingRedimensionada = imageneing.getScaledInstance(35, 35, Image.SCALE_SMOOTH); // Cambia 20x20 por el tamaño que desees
+    ImageIcon iconoeingRedimensionado = new ImageIcon(imageneingRedimensionada);
     ImageIcon iconoEliminar = new ImageIcon("imagenes/delete.png");
-    ImageIcon iconoConsultar = new ImageIcon("imagenes/consulta.png");
+    Image imagenelim = iconoEliminar.getImage();
+    Image imagenelimRedimensionada = imagenelim.getScaledInstance(35, 35, Image.SCALE_SMOOTH); // Cambia 20x20 por el tamaño que desees
+    ImageIcon iconoelimRedimensionado = new ImageIcon(imagenelimRedimensionada);
     ImageIcon iconoActualizar = new ImageIcon("imagenes/update.png");
+    Image imagenact = iconoActualizar.getImage();
+    Image imagenactRedimensionada = imagenact.getScaledInstance(35, 35, Image.SCALE_SMOOTH); // Cambia 20x20 por el tamaño que desees
+    ImageIcon iconoactRedimensionado = new ImageIcon(imagenactRedimensionada);
+
+    ImageIcon iconoConsultar = new ImageIcon("imagenes/consulta.png");
+    Image imagen = iconoConsultar.getImage();
+    Image imagenRedimensionada = imagen.getScaledInstance(30, 30, Image.SCALE_SMOOTH); // Cambia 20x20 por el tamaño que desees
+    ImageIcon iconoRedimensionado = new ImageIcon(imagenRedimensionada);
 
     public MenuPrincipal() {
         // Configuración de la ventana
@@ -40,7 +53,7 @@ public class MenuPrincipal extends JFrame {
         btnIngresar.setToolTipText("Haz clic para agregar un nuevo elemento"); // Tooltip
         btnIngresar.setBackground(new Color(203, 236, 255)); 
         btnIngresar.setBounds(240, 120, 140, 40); // Establecer las coordenadas y tamaño del botón
-        btnIngresar.setIcon(iconoIngresar);
+        btnIngresar.setIcon(iconoeingRedimensionado);
 
         btnIngresar.addActionListener(new ActionListener() {
             @Override
@@ -56,7 +69,7 @@ public class MenuPrincipal extends JFrame {
         btnEliminar.setBounds(240, 170, 100, 30); // Establecer las coordenadas y tamaño del botón
         btnEliminar.setToolTipText("Haz clic para eliminar un elemento"); // Tooltip
         btnEliminar.setBounds(240, 170, 140, 40); // Establecer las coordenadas y tamaño del botón
-        btnEliminar.setIcon(iconoEliminar);
+        btnEliminar.setIcon(iconoelimRedimensionado);
 
         btnEliminar.addActionListener(new ActionListener() {
             @Override
@@ -70,7 +83,7 @@ public class MenuPrincipal extends JFrame {
         btnActualizar.setFont(new Font("Arial", Font.BOLD, 12));
         btnActualizar.setToolTipText("Haz clic para actualizar un elemento"); // Tooltip
         btnActualizar.setBounds(235, 220, 150, 40); // Establecer las coordenadas y tamaño del botón
-        btnActualizar.setIcon(iconoActualizar);
+        btnActualizar.setIcon(iconoactRedimensionado);
         btnActualizar.setBackground(new Color(203, 236, 255)); 
         btnActualizar.addActionListener(new ActionListener() {
             @Override
@@ -84,7 +97,7 @@ public class MenuPrincipal extends JFrame {
         btnVisualizar.setFont(new Font("Arial", Font.BOLD, 12));
         btnVisualizar.setToolTipText("Haz clic para visualizar los elementos"); // Tooltip
         btnVisualizar.setBounds(235, 270, 150, 40); // Establecer las coordenadas y tamaño del botón
-        btnVisualizar.setIcon(iconoConsultar);
+        btnVisualizar.setIcon(iconoRedimensionado);
         btnVisualizar.setBackground(new Color(203, 236, 255)); 
         btnVisualizar.addActionListener(new ActionListener() {
             @Override

@@ -6,6 +6,9 @@ import java.awt.event.ActionListener;
 public class MenuConsultar extends JFrame {
 
     ImageIcon iconoConsultar = new ImageIcon("imagenes/consulta.png");
+    Image imagen = iconoConsultar.getImage();
+    Image imagenRedimensionada = imagen.getScaledInstance(30, 30, Image.SCALE_SMOOTH); // Cambia 20x20 por el tamaño que desees
+    ImageIcon iconoRedimensionado = new ImageIcon(imagenRedimensionada);
 
     public MenuConsultar() {
         // Configuración de la ventana
@@ -28,7 +31,7 @@ public class MenuConsultar extends JFrame {
         btnVisualizarCliente.setBackground(new Color(203, 236, 255));
         btnVisualizarCliente.setToolTipText("Haz clic para visualizar la lista de clientes");
 
-        btnVisualizarCliente.setIcon(iconoConsultar);
+        btnVisualizarCliente.setIcon(iconoRedimensionado);
 
         add(btnVisualizarCliente);
 
@@ -38,7 +41,7 @@ public class MenuConsultar extends JFrame {
         btnVisualizarColaborador.setBackground(new Color(203, 236, 255));
         btnVisualizarColaborador.setToolTipText("Haz clic para visualizar la lista de colaboradores");
 
-        btnVisualizarColaborador.setIcon(iconoConsultar);
+        btnVisualizarColaborador.setIcon(iconoRedimensionado);
 
         btnVisualizarColaborador.addActionListener(new ActionListener() {
             @Override
@@ -62,7 +65,7 @@ public class MenuConsultar extends JFrame {
             }
         });
 
-        btnVisualizarCargo.setIcon(iconoConsultar);
+        btnVisualizarCargo.setIcon(iconoRedimensionado);
 
         add(btnVisualizarCargo);
 

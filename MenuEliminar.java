@@ -6,6 +6,9 @@ import java.awt.event.ActionListener;
 public class MenuEliminar extends JFrame {
 
     ImageIcon iconoEliminar = new ImageIcon("imagenes/delete.png");
+    Image imagenelim = iconoEliminar.getImage();
+    Image imagenelimRedimensionada = imagenelim.getScaledInstance(35, 35, Image.SCALE_SMOOTH); // Cambia 20x20 por el tamaño que desees
+    ImageIcon iconoelimRedimensionado = new ImageIcon(imagenelimRedimensionada);
 
     public MenuEliminar() {
         // Configuración de la ventana
@@ -34,7 +37,7 @@ public class MenuEliminar extends JFrame {
         btnEliminarCliente.setBackground(new Color(203, 236, 255)); 
         btnEliminarCliente.setToolTipText("Haz clic para eliminar un cliente"); // Tooltip
 
-        btnEliminarCliente.setIcon(iconoEliminar);
+        btnEliminarCliente.setIcon(iconoelimRedimensionado);
 
         btnEliminarCliente.addActionListener(new ActionListener() {
             @Override
@@ -50,7 +53,7 @@ public class MenuEliminar extends JFrame {
         btnEliminarColaborador.setBackground(new Color(203, 236, 255)); 
         btnEliminarColaborador.setToolTipText("Haz clic para eliminar un colaborador"); // Tooltip
 
-        btnEliminarColaborador.setIcon(iconoEliminar);
+        btnEliminarColaborador.setIcon(iconoelimRedimensionado);
 
         btnEliminarColaborador.addActionListener(new ActionListener() {
             @Override
@@ -66,7 +69,7 @@ public class MenuEliminar extends JFrame {
         btnEliminarCargo.setBackground(new Color(203, 236, 255)); 
         btnEliminarCargo.setToolTipText("Haz clic para eliminar un cargo"); // Tooltip
 
-        btnEliminarCargo.setIcon(iconoEliminar);
+        btnEliminarCargo.setIcon(iconoelimRedimensionado);
 
         btnEliminarCargo.addActionListener(new ActionListener() {
             @Override
@@ -75,7 +78,7 @@ public class MenuEliminar extends JFrame {
                 abrirEliminarCargo();
             }
         });
-        add(btnEliminarCargo);
+        add( btnEliminarCargo);
 
         // Crear el botón "Regresar"
         JButton btnRegresar = new JButton("Regresar");

@@ -6,6 +6,9 @@ import java.awt.event.ActionListener;
 public class MenuActualizar extends JFrame {
 
     ImageIcon iconoActualizar = new ImageIcon("imagenes/update.png");
+    Image imagenact = iconoActualizar.getImage();
+    Image imagenactRedimensionada = imagenact.getScaledInstance(35, 35, Image.SCALE_SMOOTH); // Cambia 20x20 por el tamaño que desees
+    ImageIcon iconoactRedimensionado = new ImageIcon(imagenactRedimensionada);
 
     public MenuActualizar() {
         // Configuración de la ventana
@@ -32,7 +35,7 @@ public class MenuActualizar extends JFrame {
         JButton btnActualizarCliente = new JButton("Actualizar Cliente");
         btnActualizarCliente.setBounds(150, 80, 200, 40); // Coordenadas para el botón de actualizar cliente
         btnActualizarCliente.setToolTipText("Haz clic para actualizar los datos de un cliente"); // Tooltip
-        btnActualizarCliente.setIcon(iconoActualizar);
+        btnActualizarCliente.setIcon(iconoactRedimensionado);
         btnActualizarCliente.setBackground(new Color(203, 236, 255));
         btnActualizarCliente.addActionListener(new ActionListener() {
             @Override
@@ -48,7 +51,7 @@ public class MenuActualizar extends JFrame {
         btnActualizarColaborador.setBackground(new Color(203, 236, 255));
         btnActualizarColaborador.setToolTipText("Haz clic para actualizar los datos de un colaborador"); // Tooltip
 
-        btnActualizarColaborador.setIcon(iconoActualizar);
+        btnActualizarColaborador.setIcon(iconoactRedimensionado);
         btnActualizarColaborador.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -62,7 +65,7 @@ public class MenuActualizar extends JFrame {
         btnActualizarCargo.setBounds(150, 180, 200, 40); // Coordenadas para el botón de actualizar cargo
         btnActualizarCargo.setToolTipText("Haz clic para actualizar los datos de un cargo"); // Tooltip
         btnActualizarCargo.setBackground(new Color(203, 236, 255));
-        btnActualizarCargo.setIcon(iconoActualizar);
+        btnActualizarCargo.setIcon(iconoactRedimensionado);
         btnActualizarCargo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

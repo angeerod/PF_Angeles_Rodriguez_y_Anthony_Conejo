@@ -6,6 +6,9 @@ import java.awt.event.ActionListener;
 public class MenuIngresar extends JFrame {
 
     ImageIcon iconoIngresar = new ImageIcon("imagenes/new.png");
+    Image imageneing = iconoIngresar.getImage();
+    Image imageneingRedimensionada = imageneing.getScaledInstance(35, 35, Image.SCALE_SMOOTH); // Cambia 20x20 por el tamaño que desees
+    ImageIcon iconoeingRedimensionado = new ImageIcon(imageneingRedimensionada);
 
     public MenuIngresar() {
         // Configuración de la ventana
@@ -34,7 +37,7 @@ public class MenuIngresar extends JFrame {
 
         btnInsertarCliente.setToolTipText("Haz clic para agregar un nuevo cliente"); // Tooltip
         btnInsertarCliente.setBackground(new Color(203, 236, 255)); 
-        btnInsertarCliente.setIcon(iconoIngresar);
+        btnInsertarCliente.setIcon(iconoeingRedimensionado);
 
         btnInsertarCliente.addActionListener(new ActionListener() {
             @Override
@@ -49,7 +52,7 @@ public class MenuIngresar extends JFrame {
 
         btnAgregarColaborador.setToolTipText("Haz clic para agregar un nuevo colaborador"); // Tooltip
         btnAgregarColaborador.setBackground(new Color(203, 236, 255)); 
-        btnAgregarColaborador.setIcon(iconoIngresar);
+        btnAgregarColaborador.setIcon(iconoeingRedimensionado);
 
         btnAgregarColaborador.addActionListener(new ActionListener() {
             @Override
@@ -64,7 +67,7 @@ public class MenuIngresar extends JFrame {
         btnAgregarCargo.setBackground(new Color(203, 236, 255)); 
         btnAgregarCargo.setToolTipText("Haz clic para agregar un nuevo cargo"); // Tooltip
 
-        btnAgregarCargo.setIcon(iconoIngresar);
+        btnAgregarCargo.setIcon(iconoeingRedimensionado);
 
         btnAgregarCargo.addActionListener(new ActionListener() {
             @Override
