@@ -20,7 +20,7 @@ public class InsertarCliente extends JFrame {
 
     public InsertarCliente() {
         // Cargar la imagen de fondo
-        backgroundImage = new ImageIcon("imagenes/fondomenu2.jpg").getImage();
+        backgroundImage = new ImageIcon("imagenes/fondoacc2.png").getImage();
 
         // Configuración de la ventana
         setTitle("Insertar Cliente");
@@ -41,74 +41,74 @@ public class InsertarCliente extends JFrame {
 
         // Establecer el layout del panel de fondo
         panelFondo.setLayout(null);
-        panelFondo.setBounds(0, 0, 400, 400); // Tamaño del panel debe ser el mismo que la ventana
+        panelFondo.setBounds(-70, -30, 550, 400); // Tamaño del panel debe ser el mismo que la ventana
         add(panelFondo); // Agregar el panel al JFrame
 
         // Crear el título
         JLabel lblTitulo = new JLabel("Ingrese los datos del cliente:", SwingConstants.CENTER);
         lblTitulo.setFont(new Font("Georgia", Font.BOLD, 14));
         lblTitulo.setForeground(Color.BLACK); // Color del texto
-        lblTitulo.setBounds(50, 5, 300, 40); // Establecer las coordenadas y tamaño del título
+        lblTitulo.setBounds(120, 35, 300, 40); // Establecer las coordenadas y tamaño del título
         panelFondo.add(lblTitulo); // Añadir el JLabel al panel de fondo
         
         // Crear y añadir etiquetas y campos de texto con coordenadas personalizadas
         JLabel lblCedula = new JLabel("Cédula:");
-        lblCedula.setBounds(50, 50, 150, 25);
+        lblCedula.setBounds(120, 80, 150, 25);
         panelFondo.add(lblCedula);
         txtCedula = new JTextField();
-        txtCedula.setBounds(200, 50, 150, 25);
-        txtCedula.setBackground(new Color(199, 235, 255)); 
+        txtCedula.setBounds(270, 80, 150, 25);
+        txtCedula.setBackground(new Color(209, 226, 252)); 
         txtCedula.setToolTipText("Ingrese la cédula del cliente.");
         panelFondo.add(txtCedula);
 
         JLabel lblNombre1 = new JLabel("Primer Nombre:");
-        lblNombre1.setBounds(50, 90, 150, 25);
+        lblNombre1.setBounds(120, 120, 150, 25);
         panelFondo.add(lblNombre1);
         txtNombre1 = new JTextField();
-        txtNombre1.setBounds(200, 90, 150, 25);
-        txtNombre1.setBackground(new Color(199, 235, 255)); 
+        txtNombre1.setBounds(270, 120, 150, 25);
+        txtNombre1.setBackground(new Color(209, 226, 252)); 
         txtNombre1.setToolTipText("Ingrese el primer nombre del cliente.");
         panelFondo.add(txtNombre1);
 
         JLabel lblNombre2 = new JLabel("Segundo Nombre:");
-        lblNombre2.setBounds(50, 130, 150, 25);
+        lblNombre2.setBounds(120, 160, 150, 25);
         panelFondo.add(lblNombre2);
         txtNombre2 = new JTextField();
-        txtNombre2.setBounds(200, 130, 150, 25);
-        txtNombre2.setBackground(new Color(199, 235, 255)); 
+        txtNombre2.setBounds(270, 160, 150, 25);
+        txtNombre2.setBackground(new Color(209, 226, 252)); 
         txtNombre2.setToolTipText("Ingrese el segundo nombre del cliente.");
         panelFondo.add(txtNombre2);
 
         JLabel lblApellido1 = new JLabel("Primer Apellido:");
-        lblApellido1.setBounds(50, 170, 150, 25);
+        lblApellido1.setBounds(120, 200, 150, 25);
         panelFondo.add(lblApellido1);
         txtApellido1 = new JTextField();
-        txtApellido1.setBounds(200, 170, 150, 25);
-        txtApellido1.setBackground(new Color(199, 235, 255)); 
+        txtApellido1.setBounds(270, 200, 150, 25);
+        txtApellido1.setBackground(new Color(209, 226, 252)); 
         txtApellido1.setToolTipText("Ingrese el primer apellido del cliente.");
         panelFondo.add(txtApellido1);
 
         JLabel lblApellido2 = new JLabel("Segundo Apellido:");
-        lblApellido2.setBounds(50, 210, 150, 25);
+        lblApellido2.setBounds(120, 240, 150, 25);
         panelFondo.add(lblApellido2);
         txtApellido2 = new JTextField();
-        txtApellido2.setBounds(200, 210, 150, 25);
-        txtApellido2.setBackground(new Color(199, 235, 255)); 
+        txtApellido2.setBounds(270, 240, 150, 25);
+        txtApellido2.setBackground(new Color(209, 226, 252)); 
         txtApellido2.setToolTipText("Ingrese el segundo apellido del cliente.");
         panelFondo.add(txtApellido2);
 
         JLabel lblTelefono = new JLabel("Teléfono:");
-        lblTelefono.setBounds(50, 250, 150, 25);
+        lblTelefono.setBounds(120, 280, 150, 25);
         panelFondo.add(lblTelefono);
         txtTelefono = new JTextField();
-        txtTelefono.setBounds(200, 250, 150, 25);
-        txtTelefono.setBackground(new Color(199, 235, 255)); 
+        txtTelefono.setBounds(270, 280, 150, 25);
+        txtTelefono.setBackground(new Color(209, 226, 252)); 
         txtTelefono.setToolTipText("Ingrese el número de teléfono del cliente.");
         panelFondo.add(txtTelefono);
 
         // Botón para insertar el cliente
         JButton btnInsertar = new JButton("Agregar Cliente");
-        btnInsertar.setBounds(200, 290, 150, 30);
+        btnInsertar.setBounds(270, 320, 150, 30);
         btnInsertar.setToolTipText("Haz clic para agregar el cliente.");
         btnInsertar.setBackground(new Color(134, 172, 212));
         btnInsertar.addActionListener(new ActionListener() {
@@ -121,7 +121,7 @@ public class InsertarCliente extends JFrame {
 
         // Botón de regresar al menú principal
         btnRegresar = new JButton("Regresar");
-        btnRegresar.setBounds(50, 290, 100, 30);
+        btnRegresar.setBounds(120, 320, 100, 30);
         btnRegresar.setToolTipText("Haz clic para regresar al menú de inserción.");
         btnRegresar.setBackground(new Color(233, 149, 149));
         btnRegresar.addActionListener(e -> regresarAlMenu());

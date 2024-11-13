@@ -4,7 +4,6 @@ import java.sql.CallableStatement;
 import java.sql.SQLException;
 import javax.swing.*;
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
 
@@ -40,25 +39,24 @@ public class ActualizarColaboradores extends JFrame {
         add(panelFondo); // Agregar el panel al JFrame
 
         JLabel lblTitulo = new JLabel("Ingrese los datos a actualizar:", SwingConstants.CENTER);
-        lblTitulo.setFont(new Font("Georgia", Font.BOLD, 14));
         lblTitulo.setForeground(Color.BLACK);
         lblTitulo.setBounds(130, 25, 300, 40);
         panelFondo.add(lblTitulo);
 
-        JLabel lblIdColaborador = new JLabel("ID Colaborador:");
-        lblIdColaborador.setBounds(130, 70, 150, 25);
+        JLabel lblIdColaborador = new JLabel("ID Colab a actualizar:");
+        lblIdColaborador.setBounds(120, 70, 150, 25);
         panelFondo.add(lblIdColaborador);
         txtIdColaborador = new JTextField();
         txtIdColaborador.setBounds(280, 70, 150, 25);
-        txtIdColaborador.setBackground(new Color(199, 235, 255));
+        txtIdColaborador.setBackground(new Color(209, 226, 252));
         panelFondo.add(txtIdColaborador);
 
         JLabel lblIdCargo = new JLabel("ID Cargo:");
-        lblIdCargo.setBounds(130, 110, 150, 25);
+        lblIdCargo.setBounds(120, 110, 150, 25);
         panelFondo.add(lblIdCargo);
         txtIdCargo = new JTextField();
         txtIdCargo.setBounds(280, 110, 150, 25);
-        txtIdCargo.setBackground(new Color(199, 235, 255));
+        txtIdCargo.setBackground(new Color(209, 226, 252));
         panelFondo.add(txtIdCargo);
 
         JLabel lblNombre1 = new JLabel("Primer Nombre:");
@@ -66,7 +64,7 @@ public class ActualizarColaboradores extends JFrame {
         panelFondo.add(lblNombre1);
         txtNombre1 = new JTextField();
         txtNombre1.setBounds(280, 150, 150, 25);
-        txtNombre1.setBackground(new Color(199, 235, 255));
+        txtNombre1.setBackground(new Color(209, 226, 252));
         panelFondo.add(txtNombre1);
 
         JLabel lblNombre2 = new JLabel("Segundo Nombre:");
@@ -74,7 +72,7 @@ public class ActualizarColaboradores extends JFrame {
         panelFondo.add(lblNombre2);
         txtNombre2 = new JTextField();
         txtNombre2.setBounds(280, 190, 150, 25);
-        txtNombre2.setBackground(new Color(199, 235, 255));
+        txtNombre2.setBackground(new Color(209, 226, 252));
         panelFondo.add(txtNombre2);
 
         JLabel lblApellido1 = new JLabel("Primer Apellido:");
@@ -82,7 +80,7 @@ public class ActualizarColaboradores extends JFrame {
         panelFondo.add(lblApellido1);
         txtApellido1 = new JTextField();
         txtApellido1.setBounds(280, 230, 150, 25);
-        txtApellido1.setBackground(new Color(199, 235, 255));
+        txtApellido1.setBackground(new Color(209, 226, 252));
         panelFondo.add(txtApellido1);
 
         JLabel lblApellido2 = new JLabel("Segundo Apellido:");
@@ -90,7 +88,7 @@ public class ActualizarColaboradores extends JFrame {
         panelFondo.add(lblApellido2);
         txtApellido2 = new JTextField();
         txtApellido2.setBounds(280, 270, 150, 25);
-        txtApellido2.setBackground(new Color(199, 235, 255));
+        txtApellido2.setBackground(new Color(209, 226, 252));
         panelFondo.add(txtApellido2);
 
         JLabel lblTelefono = new JLabel("Teléfono:");
@@ -98,12 +96,12 @@ public class ActualizarColaboradores extends JFrame {
         panelFondo.add(lblTelefono);
         txtTelefono = new JTextField();
         txtTelefono.setBounds(280, 310, 150, 25);
-        txtTelefono.setBackground(new Color(199, 235, 255));
+        txtTelefono.setBackground(new Color(209, 226, 252));
         panelFondo.add(txtTelefono);
 
         JButton btnInsertar = new JButton("Actualizar Colaborador");
         btnInsertar.setBounds(270, 350, 170, 30);
-        btnInsertar.setBackground(new Color(203, 236, 255));
+        btnInsertar.setBackground(new Color(134, 172, 212));
         btnInsertar.addActionListener(e -> insertarColaborador());
         panelFondo.add(btnInsertar);
 

@@ -54,7 +54,7 @@ public class EliminarCliente extends JFrame {
 
         txtCedula = new JTextField();
         txtCedula.setBounds(160, 50, 150, 30);
-        txtCedula.setBackground(new Color(199, 235, 255)); 
+        txtCedula.setBackground(new Color(209, 226, 252)); 
         txtCedula.setToolTipText("Ingrese la cédula del cliente que desea eliminar."); // Tooltip
         panelFondo.add(txtCedula);
 

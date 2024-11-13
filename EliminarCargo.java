@@ -54,7 +54,7 @@ public class EliminarCargo extends JFrame {
 
         txtIdCargo = new JTextField();
         txtIdCargo.setBounds(160, 50, 150, 30);
-        txtIdCargo.setBackground(new Color(199, 235, 255)); 
+        txtIdCargo.setBackground(new Color(209, 226, 252)); 
         txtIdCargo.setToolTipText("Ingrese el ID del cargo que desea eliminar."); // Tooltip
         panelFondo.add(txtIdCargo);
 

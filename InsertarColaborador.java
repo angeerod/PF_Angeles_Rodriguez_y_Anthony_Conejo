@@ -14,7 +14,7 @@ public class InsertarColaborador extends JFrame {
 
     public InsertarColaborador() {
         // Cargar la imagen de fondo
-        backgroundImage = new ImageIcon("imagenes/fondomenu2.jpg").getImage();
+        backgroundImage = new ImageIcon("imagenes/fondoacc2.png").getImage();
 
         // Configuración de la ventana
         setTitle("Insertar Colaborador");
@@ -29,7 +29,7 @@ public class InsertarColaborador extends JFrame {
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 // Dibuja la imagen de fondo en el panel
-                g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+                g.drawImage(backgroundImage, -70, -30,550, 400, this);
             }
         };
 
@@ -51,7 +51,7 @@ public class InsertarColaborador extends JFrame {
         panelFondo.add(lblIdColaborador);
         txtIdColaborador = new JTextField();
         txtIdColaborador.setBounds(200, 50, 170, 25);
-        txtIdColaborador.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
+        txtIdColaborador.setBackground(new Color(209, 226, 252)); // Cambiar el color de fondo
         txtIdColaborador.setToolTipText("Ingrese el ID del colaborador."); // Tooltip
         panelFondo.add(txtIdColaborador);
 
@@ -60,7 +60,7 @@ public class InsertarColaborador extends JFrame {
         panelFondo.add(lblIdCargo);
         txtIdCargo = new JTextField();
         txtIdCargo.setBounds(200, 90, 170, 25);
-        txtIdCargo.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
+        txtIdCargo.setBackground(new Color(209, 226, 252)); // Cambiar el color de fondo
         txtIdCargo.setToolTipText("Ingrese el ID del cargo."); // Tooltip
         panelFondo.add(txtIdCargo);
 
@@ -69,7 +69,7 @@ public class InsertarColaborador extends JFrame {
         panelFondo.add(lblNombre1);
         txtNombre1 = new JTextField();
         txtNombre1.setBounds(200, 130, 170, 25);
-        txtNombre1.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
+        txtNombre1.setBackground(new Color(209, 226, 252)); // Cambiar el color de fondo
         txtNombre1.setToolTipText("Ingrese el primer nombre del colaborador."); // Tooltip
         panelFondo.add(txtNombre1);
 
@@ -78,7 +78,7 @@ public class InsertarColaborador extends JFrame {
         panelFondo.add(lblNombre2);
         txtNombre2 = new JTextField();
         txtNombre2.setBounds(200, 170, 170, 25);
-        txtNombre2.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
+        txtNombre2.setBackground(new Color(209, 226, 252)); // Cambiar el color de fondo
         txtNombre2.setToolTipText("Ingrese el segundo nombre del colaborador."); // Tooltip
         panelFondo.add(txtNombre2);
 
@@ -87,7 +87,7 @@ public class InsertarColaborador extends JFrame {
         panelFondo.add(lblApellido1);
         txtApellido1 = new JTextField();
         txtApellido1.setBounds(200, 210, 170, 25);
-        txtApellido1.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
+        txtApellido1.setBackground(new Color(209, 226, 252)); // Cambiar el color de fondo
         txtApellido1.setToolTipText("Ingrese el primer apellido del colaborador."); // Tooltip
         panelFondo.add(txtApellido1);
 
@@ -96,7 +96,7 @@ public class InsertarColaborador extends JFrame {
         panelFondo.add(lblApellido2);
         txtApellido2 = new JTextField();
         txtApellido2.setBounds(200, 250, 170, 25);
-        txtApellido2.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
+        txtApellido2.setBackground(new Color(209, 226, 252)); // Cambiar el color de fondo
         txtApellido2.setToolTipText("Ingrese el segundo apellido del colaborador."); // Tooltip
         panelFondo.add(txtApellido2);
 
@@ -105,7 +105,7 @@ public class InsertarColaborador extends JFrame {
         panelFondo.add(lblTelefono);
         txtTelefono = new JTextField();
         txtTelefono.setBounds(200, 290, 170, 25);
-        txtTelefono.setBackground(new Color(199, 235, 255)); // Cambiar el color de fondo
+        txtTelefono.setBackground(new Color(209, 226, 252)); // Cambiar el color de fondo
         txtTelefono.setToolTipText("Ingrese el número de teléfono del colaborador."); // Tooltip
         panelFondo.add(txtTelefono);
 

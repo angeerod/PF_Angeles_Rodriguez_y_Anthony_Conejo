@@ -23,7 +23,7 @@ public class Login extends JFrame {
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 // Cargar la imagen de fondo
-                ImageIcon fondoIcon = new ImageIcon("imagenes\\fondologin.jpg");
+                ImageIcon fondoIcon = new ImageIcon("imagenes\\fondologin2.jpg");
                 Image imagen = fondoIcon.getImage();
                 // Redimensionar la imagen para ajustarla al tamaño del panel
                 g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
@@ -36,13 +36,13 @@ public class Login extends JFrame {
         // Crear panel para el cuadro celeste en el medio
         JPanel panelCentro = new JPanel();
         panelCentro.setLayout(null);  // Usar coordenadas absolutas en este panel
-        panelCentro.setBackground(new Color(61, 159, 205, 100));  // Celeste con 50% de transparencia (alpha = 128)
+        panelCentro.setBackground(new Color(240, 246, 255, 100));  // Celeste con 50% de transparencia (alpha = 128)
         panelCentro.setBounds(150, 100, 400, 320);  // Posición y tamaño del panel celeste
         panelFondo.add(panelCentro);  // Agregar el panel celeste sobre la imagen de fondo
 
         // Cargar el icono y redimensionarlo
-        ImageIcon iconoLogin = new ImageIcon("imagenes\\iconlogin.png");
-        Image iconoRedimensionado = iconoLogin.getImage().getScaledInstance(70, 70, Image.SCALE_SMOOTH);  // Redimensionar
+        ImageIcon iconoLogin = new ImageIcon("imagenes\\iconosesion2.png");
+        Image iconoRedimensionado = iconoLogin.getImage().getScaledInstance(150, 100, Image.SCALE_SMOOTH);  // Redimensionar
         JLabel lblIcono = new JLabel(new ImageIcon(iconoRedimensionado));
         
         // Posicionar el icono en la parte superior del panel
@@ -83,7 +83,7 @@ public class Login extends JFrame {
         // Botón de autenticación
         JButton btnLogin = new JButton("Iniciar sesión");
         btnLogin.setBounds(130, 250, 150, 30);
-        btnLogin.setBackground(new Color(203, 236, 255)); 
+        btnLogin.setBackground(new Color(134, 172, 212)); 
         btnLogin.setToolTipText("Haz clic para iniciar sesión");  // Tooltip
         panelCentro.add(btnLogin);
 

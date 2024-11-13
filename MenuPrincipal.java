@@ -52,22 +52,22 @@ public class MenuPrincipal extends JFrame {
         add(panelFondo); // Agregar el panel al JFrame
 
         // Crear el título de bienvenida
-        JLabel lblBienvenida = new JLabel("Bienvenidos a nuestra tienda", SwingConstants.CENTER);
+        JLabel lblBienvenida = new JLabel("¡Bienvenido a Oceánica Store!", SwingConstants.CENTER);
         lblBienvenida.setFont(new Font("Georgia", Font.BOLD, 24));
         lblBienvenida.setForeground(Color.BLACK); // Color del texto
         lblBienvenida.setBounds(50, 20, 500, 40); // Establecer las coordenadas y tamaño del título
         panelFondo.add(lblBienvenida);
 
-        JLabel lblSeleccion = new JLabel("Seleccione la opción que desea realizar:", SwingConstants.CENTER);
+        JLabel lblSeleccion = new JLabel("Seleccione la opción a realizar:", SwingConstants.CENTER);
         lblSeleccion.setFont(new Font("Georgia", Font.BOLD, 14));
         lblSeleccion.setForeground(Color.BLACK); // Color del texto
-        lblSeleccion.setBounds(50, 60, 500, 40); // Establecer las coordenadas y tamaño del título
+        lblSeleccion.setBounds(-10, 60, 500, 40); // Establecer las coordenadas y tamaño del título
         panelFondo.add(lblSeleccion);
 
         // Crear el botón "Agregar"
         JButton btnIngresar = new JButton("Agregar");
         btnIngresar.setFont(new Font("Arial", Font.BOLD, 12));
-        btnIngresar.setBounds(240, 120, 140, 40);
+        btnIngresar.setBounds(170, 110, 150, 40);
         btnIngresar.setBackground(new Color(134, 172, 212));
         btnIngresar.setIcon(iconoeingRedimensionado);
         btnIngresar.setFocusable(false);  // Importante para que no interfiera en el foco
@@ -84,7 +84,7 @@ public class MenuPrincipal extends JFrame {
         JButton btnEliminar = new JButton("Eliminar");
         btnEliminar.setFont(new Font("Arial", Font.BOLD, 12));
         btnEliminar.setBackground(new Color(134, 172, 212));
-        btnEliminar.setBounds(240, 170, 140, 40);
+        btnEliminar.setBounds(170, 160, 150, 40);
         btnEliminar.setIcon(iconoelimRedimensionado);
         btnEliminar.setFocusable(false);  // Evita interferencia del foco
         panelFondo.add(btnEliminar);
@@ -100,7 +100,7 @@ public class MenuPrincipal extends JFrame {
         JButton btnActualizar = new JButton("Actualizar");
         btnActualizar.setFont(new Font("Arial", Font.BOLD, 12));
         btnActualizar.setToolTipText("Haz clic para actualizar un elemento");
-        btnActualizar.setBounds(235, 220, 150, 40);
+        btnActualizar.setBounds(170, 210, 150, 40);
         btnActualizar.setIcon(iconoactRedimensionado);
         btnActualizar.setBackground(new Color(134, 172, 212));
         btnActualizar.setFocusable(false); // Evita interferencia de foco
@@ -117,7 +117,7 @@ public class MenuPrincipal extends JFrame {
         JButton btnVisualizar = new JButton("Consultar");
         btnVisualizar.setFont(new Font("Arial", Font.BOLD, 12));
         btnVisualizar.setToolTipText("Haz clic para visualizar los elementos");
-        btnVisualizar.setBounds(235, 270, 150, 40);
+        btnVisualizar.setBounds(170, 260, 150, 40);
         btnVisualizar.setIcon(iconoRedimensionado);
         btnVisualizar.setBackground(new Color(134, 172, 212));
         btnVisualizar.setFocusable(false); // Evita interferencia de foco
@@ -129,6 +129,39 @@ public class MenuPrincipal extends JFrame {
                 abrirMenuVisualizar(); // Abrir el menú de visualización
             }
         });
+
+        // Crear el JTextPane para la descripción con texto justificado
+        JLabel lblUs = new JLabel("Sobre nosotros:", SwingConstants.CENTER);
+        lblUs.setFont(new Font("Georgia", Font.BOLD, 14));
+        lblUs.setForeground(Color.BLACK); // Color del texto
+        lblUs.setBounds(220, 70, 500, 40); // Establecer las coordenadas y tamaño del título
+        panelFondo.add(lblUs);
+
+        JTextPane descripcion = new JTextPane();
+        descripcion.setContentType("text/html");
+        descripcion.setText("<html><body style='text-align: justify; font-family: Georgia; font-size: 11px;'>"
+                + "Oceánica es una tienda inspirada en el estilo de vida de la costa, dedicada a ofrecer lo mejor en moda de playa, "
+                + "accesorios y equipo de surf. Perfecto para quienes buscan estilo, aventura y un pedacito de paraíso en cada día soleado. "
+                + "Recuerda que un porcentaje de nuestras ventas se destina a la conservación de playas nacionales, contribuyendo a proteger "
+                + "y preservar estos espacios naturales."
+                + "</body></html>");
+        descripcion.setEditable(false); // Hacer que el texto no sea editable
+        descripcion.setOpaque(false); // Hacer transparente el fondo
+        descripcion.setBounds(375, 100, 190, 260); // Posición y tamaño del texto
+
+        // Crear el cuadro celeste con opacidad
+        JPanel cuadroCeleste = new JPanel();
+        cuadroCeleste.setBackground(new Color(173, 216, 230, 150)); // Color celeste con opacidad
+        cuadroCeleste.setBounds(370, 75, 200, 295); // Ajuste de la posición y tamaño del cuadro
+        panelFondo.add(cuadroCeleste); // Añadir el cuadro celeste
+
+        // Añadir el JTextPane al panel de fondo
+        panelFondo.add(descripcion);  
+
+        // Ajuste del Z-Order para asegurarse de que el cuadro esté debajo de la descripción
+        panelFondo.setComponentZOrder(cuadroCeleste, 1);
+        panelFondo.setComponentZOrder(lblUs, 1);  
+        panelFondo.setComponentZOrder(descripcion, 0);
     }
 
     private void abrirMenuPrincipal() {
@@ -150,16 +183,17 @@ public class MenuPrincipal extends JFrame {
     }
 
     private void abrirMenuVisualizar() {
-        MenuConsultar menuConsultar = new MenuConsultar(); // Crear la ventana de visualizar
+        MenuConsultar menuConsultar = new MenuConsultar(); // Crear la ventana de consulta
         menuConsultar.setVisible(true);
         this.dispose(); // Cierra la ventana de inicio
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            MenuPrincipal inicio = new MenuPrincipal();
-            inicio.setVisible(true);
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new MenuPrincipal().setVisible(true);
+            }
         });
     }
 }
-

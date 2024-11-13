@@ -56,7 +56,7 @@ public class EliminarColaborador extends JFrame {
 
         txtIdColaborador = new JTextField();
         txtIdColaborador.setBounds(160, 50, 160, 30);
-        txtIdColaborador.setBackground(new Color(199, 235, 255)); 
+        txtIdColaborador.setBackground(new Color(209, 226, 252)); 
         txtIdColaborador.setToolTipText("Ingrese el ID del colaborador que desea eliminar."); // Tooltip
         panelFondo.add(txtIdColaborador);
 

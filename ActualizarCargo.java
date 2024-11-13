@@ -53,7 +53,7 @@ public class ActualizarCargo extends JFrame {
 
         txtIdCargo = new JTextField();
         txtIdCargo.setBounds(220, 80, 150, 25);
-        txtIdCargo.setBackground(new Color(199, 235, 255)); 
+        txtIdCargo.setBackground(new Color(209, 226, 252)); 
         panelFondo.add(txtIdCargo);
 
         // Etiqueta y campo de texto para el nombre
@@ -63,7 +63,7 @@ public class ActualizarCargo extends JFrame {
 
         txtNombre = new JTextField();
         txtNombre.setBounds(220, 130, 150, 25);
-        txtNombre.setBackground(new Color(199, 235, 255)); 
+        txtNombre.setBackground(new Color(209, 226, 252)); 
         panelFondo.add(txtNombre);
 
         // Etiqueta y campo de texto para el salario
@@ -73,7 +73,7 @@ public class ActualizarCargo extends JFrame {
 
         txtSalario = new JTextField();
         txtSalario.setBounds(220, 180, 150, 25);
-        txtSalario.setBackground(new Color(199, 235, 255)); 
+        txtSalario.setBackground(new Color(209, 226, 252)); 
         panelFondo.add(txtSalario);
 
         // Botón para actualizar el cargo

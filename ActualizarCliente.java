@@ -50,7 +50,7 @@ public class ActualizarCliente extends JFrame {
         panelFondo.add(lblCedula);
         txtCedula = new JTextField();
         txtCedula.setBounds(270, 80, 150, 25);
-        txtCedula.setBackground(new Color(199, 235, 255)); 
+        txtCedula.setBackground(new Color(209, 226, 252)); 
         panelFondo.add(txtCedula);
 
         JLabel lblNombre1 = new JLabel("Primer Nombre:");
@@ -58,7 +58,7 @@ public class ActualizarCliente extends JFrame {
         panelFondo.add(lblNombre1);
         txtNombre1 = new JTextField();
         txtNombre1.setBounds(270, 120, 150, 25);
-        txtNombre1.setBackground(new Color(199, 235, 255)); 
+        txtNombre1.setBackground(new Color(209, 226, 252)); 
         panelFondo.add(txtNombre1);
 
         JLabel lblNombre2 = new JLabel("Segundo Nombre:");
@@ -66,7 +66,7 @@ public class ActualizarCliente extends JFrame {
         panelFondo.add(lblNombre2);
         txtNombre2 = new JTextField();
         txtNombre2.setBounds(270, 160, 150, 25);
-        txtNombre2.setBackground(new Color(199, 235, 255)); 
+        txtNombre2.setBackground(new Color(209, 226, 252)); 
         panelFondo.add(txtNombre2);
 
         JLabel lblApellido1 = new JLabel("Primer Apellido:");
@@ -74,7 +74,7 @@ public class ActualizarCliente extends JFrame {
         panelFondo.add(lblApellido1);
         txtApellido1 = new JTextField();
         txtApellido1.setBounds(270, 200, 150, 25);
-        txtApellido1.setBackground(new Color(199, 235, 255)); 
+        txtApellido1.setBackground(new Color(209, 226, 252)); 
         panelFondo.add(txtApellido1);
 
         JLabel lblApellido2 = new JLabel("Segundo Apellido:");
@@ -82,7 +82,7 @@ public class ActualizarCliente extends JFrame {
         panelFondo.add(lblApellido2);
         txtApellido2 = new JTextField();
         txtApellido2.setBounds(270, 240, 150, 25);
-        txtApellido2.setBackground(new Color(199, 235, 255)); 
+        txtApellido2.setBackground(new Color(209, 226, 252)); 
         panelFondo.add(txtApellido2);
 
         JLabel lblTelefono = new JLabel("Teléfono:");
@@ -90,7 +90,7 @@ public class ActualizarCliente extends JFrame {
         panelFondo.add(lblTelefono);
         txtTelefono = new JTextField();
         txtTelefono.setBounds(270, 280, 150, 25);
-        txtTelefono.setBackground(new Color(199, 235, 255)); 
+        txtTelefono.setBackground(new Color(209, 226, 252)); 
         panelFondo.add(txtTelefono);
 
         JButton btnActualizar = new JButton("Actualizar Cliente");
