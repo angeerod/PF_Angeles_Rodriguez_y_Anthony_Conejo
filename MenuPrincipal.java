@@ -67,6 +67,7 @@ public class MenuPrincipal extends JFrame {
         // Crear el botón "Agregar"
         JButton btnIngresar = new JButton("Agregar");
         btnIngresar.setFont(new Font("Arial", Font.BOLD, 12));
+        btnIngresar.setToolTipText("Haz clic para agregar un elemento");
         btnIngresar.setBounds(170, 110, 150, 40);
         btnIngresar.setBackground(new Color(134, 172, 212));
         btnIngresar.setIcon(iconoeingRedimensionado);
@@ -83,6 +84,7 @@ public class MenuPrincipal extends JFrame {
         // Crear el botón "Eliminar"
         JButton btnEliminar = new JButton("Eliminar");
         btnEliminar.setFont(new Font("Arial", Font.BOLD, 12));
+        btnEliminar.setToolTipText("Haz clic para eliminar un elemento");
         btnEliminar.setBackground(new Color(134, 172, 212));
         btnEliminar.setBounds(170, 160, 150, 40);
         btnEliminar.setIcon(iconoelimRedimensionado);
