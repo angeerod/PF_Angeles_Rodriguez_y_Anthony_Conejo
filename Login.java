@@ -50,8 +50,8 @@ public class Login extends JFrame {
         panelCentro.add(lblIcono);  // Añadir el icono al panel
 
         // Título
-        JLabel lblLogin = new JLabel("Login:");
-        lblLogin.setBounds(165, 100, 100, 25);  // Ajustar posición debajo del icono
+        JLabel lblLogin = new JLabel("Inicio de Sesión");
+        lblLogin.setBounds(110, 100, 200, 25);  // Ajustar posición debajo del icono
         lblLogin.setForeground(new Color(8, 68, 102));  
         lblLogin.setFont(new Font("Georgia", Font.BOLD, 24));
         panelCentro.add(lblLogin);
