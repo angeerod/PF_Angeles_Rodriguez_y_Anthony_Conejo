@@ -12,6 +12,7 @@ public class ActualizarCliente extends JFrame {
     
     private JTextField txtCedula, txtNombre1, txtNombre2, txtApellido1, txtApellido2, txtTelefono;
     private JButton btnRegresar;
+
     private Image backgroundImage; // Variable para la imagen de fondo
 
     public ActualizarCliente() {
@@ -36,7 +37,7 @@ public class ActualizarCliente extends JFrame {
 
         // Establecer el layout del panel de fondo
         panelFondo.setLayout(null);
-        panelFondo.setBounds(-70, -30, 550,400); // Tamaño del panel debe ser el mismo que la ventana
+        panelFondo.setBounds(-70, -30, 550, 400); // Tamaño del panel debe ser el mismo que la ventana
         add(panelFondo); // Agregar el panel al JFrame
 
         JLabel lblTitulo = new JLabel("Ingrese los datos a actualizar:", SwingConstants.CENTER);
@@ -51,6 +52,7 @@ public class ActualizarCliente extends JFrame {
         txtCedula = new JTextField();
         txtCedula.setBounds(270, 80, 150, 25);
         txtCedula.setBackground(new Color(209, 226, 252)); 
+        txtCedula.setToolTipText("Ingrese la cédula del cliente que desea actualizar");
         panelFondo.add(txtCedula);
 
         JLabel lblNombre1 = new JLabel("Primer Nombre:");
@@ -59,6 +61,7 @@ public class ActualizarCliente extends JFrame {
         txtNombre1 = new JTextField();
         txtNombre1.setBounds(270, 120, 150, 25);
         txtNombre1.setBackground(new Color(209, 226, 252)); 
+        txtNombre1.setToolTipText("Ingrese el primer nombre del cliente");
         panelFondo.add(txtNombre1);
 
         JLabel lblNombre2 = new JLabel("Segundo Nombre:");
@@ -67,6 +70,7 @@ public class ActualizarCliente extends JFrame {
         txtNombre2 = new JTextField();
         txtNombre2.setBounds(270, 160, 150, 25);
         txtNombre2.setBackground(new Color(209, 226, 252)); 
+        txtNombre2.setToolTipText("Ingrese el segundo nombre del cliente (opcional)");
         panelFondo.add(txtNombre2);
 
         JLabel lblApellido1 = new JLabel("Primer Apellido:");
@@ -75,6 +79,7 @@ public class ActualizarCliente extends JFrame {
         txtApellido1 = new JTextField();
         txtApellido1.setBounds(270, 200, 150, 25);
         txtApellido1.setBackground(new Color(209, 226, 252)); 
+        txtApellido1.setToolTipText("Ingrese el primer apellido del cliente");
         panelFondo.add(txtApellido1);
 
         JLabel lblApellido2 = new JLabel("Segundo Apellido:");
@@ -83,6 +88,7 @@ public class ActualizarCliente extends JFrame {
         txtApellido2 = new JTextField();
         txtApellido2.setBounds(270, 240, 150, 25);
         txtApellido2.setBackground(new Color(209, 226, 252)); 
+        txtApellido2.setToolTipText("Ingrese el segundo apellido del cliente");
         panelFondo.add(txtApellido2);
 
         JLabel lblTelefono = new JLabel("Teléfono:");
@@ -91,17 +97,20 @@ public class ActualizarCliente extends JFrame {
         txtTelefono = new JTextField();
         txtTelefono.setBounds(270, 280, 150, 25);
         txtTelefono.setBackground(new Color(209, 226, 252)); 
+        txtTelefono.setToolTipText("Ingrese el número de teléfono del cliente");
         panelFondo.add(txtTelefono);
 
         JButton btnActualizar = new JButton("Actualizar Cliente");
         btnActualizar.setBackground(new Color(134, 172, 212)); 
         btnActualizar.setBounds(270, 320, 150, 30);
+        btnActualizar.setToolTipText("Haz click para actualizar los datos del cliente");
         btnActualizar.addActionListener(e -> actualizarCliente());
         panelFondo.add(btnActualizar);
 
         btnRegresar = new JButton("Regresar");
         btnRegresar.setBounds(120, 320, 100, 30);
         btnRegresar.setBackground(new Color(233, 149, 149));
+        btnRegresar.setToolTipText("Haz click para regresar al menú de actualización.");
         btnRegresar.addActionListener(e -> regresarAlMenu());
         panelFondo.add(btnRegresar);
     }

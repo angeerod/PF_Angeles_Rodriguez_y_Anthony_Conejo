@@ -54,6 +54,7 @@ public class ActualizarCargo extends JFrame {
         txtIdCargo = new JTextField();
         txtIdCargo.setBounds(220, 80, 150, 25);
         txtIdCargo.setBackground(new Color(209, 226, 252)); 
+        txtIdCargo.setToolTipText("Ingrese el ID del cargo a actualizar.");
         panelFondo.add(txtIdCargo);
 
         // Etiqueta y campo de texto para el nombre
@@ -64,6 +65,7 @@ public class ActualizarCargo extends JFrame {
         txtNombre = new JTextField();
         txtNombre.setBounds(220, 130, 150, 25);
         txtNombre.setBackground(new Color(209, 226, 252)); 
+        txtNombre.setToolTipText("Ingrese el nuevo nombre del cargo.");
         panelFondo.add(txtNombre);
 
         // Etiqueta y campo de texto para el salario
@@ -74,12 +76,14 @@ public class ActualizarCargo extends JFrame {
         txtSalario = new JTextField();
         txtSalario.setBounds(220, 180, 150, 25);
         txtSalario.setBackground(new Color(209, 226, 252)); 
+        txtSalario.setToolTipText("Ingrese el nuevo salario del cargo.");
         panelFondo.add(txtSalario);
 
         // Botón para actualizar el cargo
         JButton btnActualizar = new JButton("Actualizar Cargo");
         btnActualizar.setBounds(220, 230, 150, 30);
         btnActualizar.setBackground(new Color(134, 172, 212)); 
+        btnActualizar.setToolTipText("Haz click para actualizar los datos del cargo.");
         btnActualizar.addActionListener(e -> actualizarCargo());
         panelFondo.add(btnActualizar);
 
@@ -87,6 +91,7 @@ public class ActualizarCargo extends JFrame {
         btnRegresar = new JButton("Regresar");
         btnRegresar.setBounds(70, 230, 100, 30);
         btnRegresar.setBackground(new Color(233, 149, 149));
+        btnActualizar.setToolTipText("Haz click para regresar al menu de actualización.");
         btnRegresar.addActionListener(e -> regresarAlMenu());
         panelFondo.add(btnRegresar);
     }

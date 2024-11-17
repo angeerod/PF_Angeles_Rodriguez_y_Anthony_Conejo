@@ -49,6 +49,7 @@ public class ActualizarColaboradores extends JFrame {
         txtIdColaborador = new JTextField();
         txtIdColaborador.setBounds(280, 70, 150, 25);
         txtIdColaborador.setBackground(new Color(209, 226, 252));
+        txtIdColaborador.setToolTipText("Ingrese el ID del colaborador a actualizar.");
         panelFondo.add(txtIdColaborador);
 
         JLabel lblIdCargo = new JLabel("ID Cargo:");
@@ -57,6 +58,7 @@ public class ActualizarColaboradores extends JFrame {
         txtIdCargo = new JTextField();
         txtIdCargo.setBounds(280, 110, 150, 25);
         txtIdCargo.setBackground(new Color(209, 226, 252));
+        txtIdCargo.setToolTipText("Ingrese el ID del nuevo cargo del colaborador.");
         panelFondo.add(txtIdCargo);
 
         JLabel lblNombre1 = new JLabel("Primer Nombre:");
@@ -65,6 +67,7 @@ public class ActualizarColaboradores extends JFrame {
         txtNombre1 = new JTextField();
         txtNombre1.setBounds(280, 150, 150, 25);
         txtNombre1.setBackground(new Color(209, 226, 252));
+        txtNombre1.setToolTipText("Ingrese el primer nombre del colaborador.");
         panelFondo.add(txtNombre1);
 
         JLabel lblNombre2 = new JLabel("Segundo Nombre:");
@@ -73,6 +76,7 @@ public class ActualizarColaboradores extends JFrame {
         txtNombre2 = new JTextField();
         txtNombre2.setBounds(280, 190, 150, 25);
         txtNombre2.setBackground(new Color(209, 226, 252));
+        txtNombre2.setToolTipText("Ingrese el segundo nombre del colaborador (opcional).");
         panelFondo.add(txtNombre2);
 
         JLabel lblApellido1 = new JLabel("Primer Apellido:");
@@ -81,6 +85,7 @@ public class ActualizarColaboradores extends JFrame {
         txtApellido1 = new JTextField();
         txtApellido1.setBounds(280, 230, 150, 25);
         txtApellido1.setBackground(new Color(209, 226, 252));
+        txtApellido1.setToolTipText("Ingrese el primer apellido del colaborador.");
         panelFondo.add(txtApellido1);
 
         JLabel lblApellido2 = new JLabel("Segundo Apellido:");
@@ -89,6 +94,7 @@ public class ActualizarColaboradores extends JFrame {
         txtApellido2 = new JTextField();
         txtApellido2.setBounds(280, 270, 150, 25);
         txtApellido2.setBackground(new Color(209, 226, 252));
+        txtApellido2.setToolTipText("Ingrese el segundo apellido del colaborador.");
         panelFondo.add(txtApellido2);
 
         JLabel lblTelefono = new JLabel("Teléfono:");
@@ -97,17 +103,20 @@ public class ActualizarColaboradores extends JFrame {
         txtTelefono = new JTextField();
         txtTelefono.setBounds(280, 310, 150, 25);
         txtTelefono.setBackground(new Color(209, 226, 252));
+        txtTelefono.setToolTipText("Ingrese el número de teléfono del colaborador.");
         panelFondo.add(txtTelefono);
 
         JButton btnInsertar = new JButton("Actualizar Colaborador");
         btnInsertar.setBounds(270, 350, 170, 30);
         btnInsertar.setBackground(new Color(134, 172, 212));
+        btnInsertar.setToolTipText("Haz click para actualizar los datos del colaborador.");
         btnInsertar.addActionListener(e -> insertarColaborador());
         panelFondo.add(btnInsertar);
 
         btnRegresar = new JButton("Regresar");
         btnRegresar.setBounds(120, 350, 100, 30);
         btnRegresar.setBackground(new Color(233, 149, 149));
+        btnRegresar.setToolTipText("Haz click para regresar al menú de actualización.");
         btnRegresar.addActionListener(e -> regresarAlMenu());
         panelFondo.add(btnRegresar);
     }
